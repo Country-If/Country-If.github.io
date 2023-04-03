@@ -62,7 +62,7 @@ pin: false
 - 测试部分参考：[HElib/examples/README.md](https://github.com/homenc/HElib/blob/master/examples/README.md)
 
 - 自己编写程序时，注意CMakeList.txt的写法，注意文件路径是否写对，自己编写的程序路径不同，CMakeList就需要修改对应的路径，下面是我的CMakeList，大概能改的地方圈出来了
-![CMakeList](assets/img/144c6834fa6c46449f0f51cd74465eec.png)
+![CMakeList](/assets/img/144c6834fa6c46449f0f51cd74465eec.png)
 ## 效果
 - CLion能够检索到HElib的库
 
