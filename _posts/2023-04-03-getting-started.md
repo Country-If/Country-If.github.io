@@ -1,6 +1,5 @@
 ---
 title: Github Page Configuration
-author: Maylon
 date: 2023-03-04 10:00:00 +0800
 categories: [Tutorial]
 tags: [getting started]
