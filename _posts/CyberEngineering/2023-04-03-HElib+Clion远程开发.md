@@ -14,7 +14,10 @@ pin: false
 - 综上，需求是，让CLion连接搭建好HElib的Docker上，在本地CLion中编写代码，在远程服务器的Docker里运行代码
 
 ## Clion连接服务器内的Docker
+
+
 ### Docker
+
 - Docker安装略
 - Docker创建容器
 	```
@@ -38,7 +41,11 @@ pin: false
 	```
 - 测试连接
 	- 在Docker外，用ssh测试连接：`ssh root@localhost -p 12022`，输入Docker的root密码，成功如下：![welcome](/assets/img/f7b4d81a3d22432b8bcb8662ef8aecea.png)
+
+
+
 ### CLion
+
 - Settings -> Build... -> Toolchains -> '+' -> Remote Host
 ![settings](/assets/img/165066cf44de4621836de6525e2f106e.png)
 - 可以自定义名字，然后设置连接
@@ -63,7 +70,11 @@ pin: false
 
 - 自己编写程序时，注意CMakeList.txt的写法，注意文件路径是否写对，自己编写的程序路径不同，CMakeList就需要修改对应的路径，下面是我的CMakeList，大概能改的地方圈出来了
 ![CMakeList](/assets/img/144c6834fa6c46449f0f51cd74465eec.png)
+
+
+
 ## 效果
+
 - CLion能够检索到HElib的库
 
 	![lib](/assets/img/1f9f046e0a434844a1752abc2625f9a2.png)
