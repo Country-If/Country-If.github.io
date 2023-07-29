@@ -86,11 +86,11 @@ avatar: 'assets/my_avatar.jpg'
 toc: true
 
 comments:
-  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  active: true # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   gitalk:
     enable: true
     github_id: Country-If
-    repo: country-if.github.io
+    repo: gitalk_comments
     client_id: 2cd80a8a10e722b27de8
     client_secret: 567743e9b35102c642bdad3def4d4c5d16dd4bab
   # The active options are as follows:
