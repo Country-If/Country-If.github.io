@@ -94,6 +94,20 @@ tail_includes:
   {{ content }}
 </div>
 
+<div id="gitalk-container"></div>
+<script type="text/javascript">
+    var gitalk = new Gitalk({
+    // gitalk的主要参数
+    clientID: `2cd80a8a10e722b27de8`,
+    clientSecret: `567743e9b35102c642bdad3def4d4c5d16dd4bab`,
+    repo: `country-if.github.io`,
+    owner: 'Country-If',
+    admin: ['Country-If'],
+    id: '<%= page.date %>',
+    });
+    gitalk.render('gitalk-container');
+</script>
+
 <div class="post-tail-wrapper text-muted">
 
   <!-- categories -->
@@ -143,16 +157,4 @@ tail_includes:
 
 </div><!-- div.post-tail-wrapper -->
 
-<div id="gitalk-container"></div>
-<script type="text/javascript">
-    var gitalk = new Gitalk({
-    // gitalk的主要参数
-    clientID: `2cd80a8a10e722b27de8`,
-    clientSecret: `567743e9b35102c642bdad3def4d4c5d16dd4bab`,
-    repo: `country-if.github.io`,
-    owner: 'Country-If',
-    admin: ['Country-If'],
-    id: '<%= page.date %>',
-    });
-    gitalk.render('gitalk-container');
-</script>
+
