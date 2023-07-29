@@ -152,7 +152,7 @@ tail_includes:
     repo: `country-if.github.io`,
     owner: 'Country-If',
     admin: ['Country-If'],
-    id: md5(location.pathname),
+    id: '<%= page.date %>',
     });
     gitalk.render('gitalk-container');
 </script>
