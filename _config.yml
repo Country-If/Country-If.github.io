@@ -31,11 +31,6 @@ url: "https://Country-If.github.io"
 github:
   username: Country-If # change to your github username
 
-gitalk:
-  repo: country-if.github.io
-  client_id: 2cd80a8a10e722b27de8
-  client_secret: 567743e9b35102c642bdad3def4d4c5d16dd4bab
-
 #twitter:
 #  username: twitter_username # change to your twitter username
 
@@ -92,6 +87,12 @@ toc: true
 
 comments:
   active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
+  gitalk:
+    enable: true
+    github_id: Country-If
+    repo: country-if.github.io
+    client_id: 2cd80a8a10e722b27de8
+    client_secret: 567743e9b35102c642bdad3def4d4c5d16dd4bab
   # The active options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
