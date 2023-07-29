@@ -9,6 +9,9 @@ tail_includes:
   - comments
 ---
 
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+
 <h1 data-toc-skip>{{ page.title }}</h1>
 
 <div class="post-meta text-muted">
@@ -140,8 +143,6 @@ tail_includes:
 
 </div><!-- div.post-tail-wrapper -->
 
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
 <div id="gitalk-container"></div>
 <script type="text/javascript">
     var gitalk = new Gitalk({
