@@ -88,7 +88,7 @@ toc: true
 gitalk:
   enable: true
   github_id: Country-If
-  repo: gitalk_comments
+  repo: Country-If.github.io
   client_id: 2cd80a8a10e722b27de8
   client_secret: 567743e9b35102c642bdad3def4d4c5d16dd4bab
 

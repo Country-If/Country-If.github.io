@@ -141,14 +141,15 @@ tail_includes:
   <div id="gitalk-container"></div>
   <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
   <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
+  <script src="/js/md5.min.js"></script>
   <script type="text/javascript">
     var gitalk = new Gitalk({
     clientID: '2cd80a8a10e722b27de8',
     clientSecret: '567743e9b35102c642bdad3def4d4c5d16dd4bab',
-    repo: 'gitalk_comments',
+    repo: 'Country-If.github.io',
     owner: 'Country-If',
     admin: ['Country-If'],
-    id: 'gitalk',
+    id: md5(location.href),
     language: 'en',
     perPage: 10,
     });
