@@ -31,6 +31,11 @@ url: "https://Country-If.github.io"
 github:
   username: Country-If # change to your github username
 
+gitalk:
+  repo: country-if.github.io
+  client_id: 2cd80a8a10e722b27de8
+  client_secret: 567743e9b35102c642bdad3def4d4c5d16dd4bab
+
 #twitter:
 #  username: twitter_username # change to your twitter username
 
