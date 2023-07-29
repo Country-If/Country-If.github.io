@@ -85,14 +85,15 @@ avatar: 'assets/my_avatar.jpg'
 # boolean type, the global switch for TOC in posts.
 toc: true
 
+gitalk:
+  enable: true
+  github_id: Country-If
+  repo: gitalk_comments
+  client_id: 2cd80a8a10e722b27de8
+  client_secret: 567743e9b35102c642bdad3def4d4c5d16dd4bab
+
 comments:
-  active: true # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
-  gitalk:
-    enable: true
-    github_id: Country-If
-    repo: gitalk_comments
-    client_id: 2cd80a8a10e722b27de8
-    client_secret: 567743e9b35102c642bdad3def4d4c5d16dd4bab
+  active: # The global switch for posts comments, e.g., 'disqus'.  Keep it empty means disable
   # The active options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
