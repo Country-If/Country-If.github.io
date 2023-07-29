@@ -4,6 +4,8 @@ date: 2023-04-03 11:00:00 +0800
 categories: [Tutorial]
 tags: [getting started]
 pin: true
+layout: default
+comments: true
 ---
 
 ## Here are several official tutorial links
