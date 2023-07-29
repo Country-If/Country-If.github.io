@@ -13,6 +13,10 @@ pin: true
 
 Using the Chirpy Starter: Sign in to GitHub and browse to [**Chirpy Starter**](https://github.com/cotes2020/chirpy-starter/), click the button <kbd>Use this template</kbd> > <kbd>Create a new repository</kbd>, and name the new repository `USERNAME.github.io`, where `USERNAME` represents your GitHub username.
 
+### Check
+
+After the creation step, the source codes will generate automatically in the repository. It's better to check whether the folders (eg. _layouts, _includes, etc) are the same as the original repository. I suggest downloading the git repository locally to add/delete folders/files more conveniently. 
+
 ### Configuration
 
 Generally, go to `_config.yml` and configure the variables as needed. Some of them are typical options:
