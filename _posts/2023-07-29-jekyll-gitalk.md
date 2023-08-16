@@ -70,7 +70,7 @@ gitalk:
     repo: '评论存放的仓库名称',
     owner: 'Github ID/username',
     admin: ['同owner, 也可添加其他管理员'],
-    id: md5(location.href),
+    id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]),
     language: 'en',
     perPage: 10,
     });
@@ -81,7 +81,7 @@ gitalk:
 - `ClientID`到`admin`的选项需要填写自己的内容，注意！引号需要保留！
 - 前五个选项是必须的，第六个选项`id`其实也是必须的，得设置好不然可能会出问题，再后面的选项是自定义的(自定义选项见下文)
 - 将上面的代码，贴到`_layouts/post.html`中，注意粘贴的位置，我是把它嵌入到最后一个`<div>`标签里面的，自己贴完可以打开HTML查看位置，能显示出来应该位置就对了，粘贴的位置可以多尝试去调整(懂前端的当我没说)
-- 注意到上面代码里的这一行：`<script src="/js/md5.min.js"></script>`以及`id: md5(location.href),`，这是使用md5对`location.href`进行处理，获取到的唯一标识符作为id，这个id将会是评论仓库里issue对应的标签
+- 注意到上面代码里的这一行：`<script src="/js/md5.min.js"></script>`以及`id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1])`，这是使用md5进行处理，获取到的唯一标识符作为id，这个id将会是评论仓库里issue对应的标签，`location.href`对应网站的url，使用正则表达式，提取`posts/`到下一个`/`之间的字符串，也就是文章对应的文件名称(标题)
 
 ##### /js/md5.min.js -> 提供md5处理的方法
 
