@@ -9,7 +9,7 @@ pin: false
 
 
 ## 前言
-- Teracloud除了存文献外，它还是个云盘，可以搭配各种同步软件使用，之前在博客[多终端云同步文献管理：Zotero+TeraCloud（Windows+Android）](https://country-if.github.io/posts/Zotero+TeraCloud)里提到用同步软件搭配Teracloud使用，这里只以Windows下的GoodSync为例，介绍下常用用法。
+- Teracloud除了存文献外，它还是个云盘，可以搭配各种同步软件使用，之前在博客[多终端云同步文献管理：Zotero+TeraCloud（Windows+Android）](../Zotero+TeraCloud)里提到用同步软件搭配Teracloud使用，这里只以Windows下的GoodSync为例，介绍下常用用法。
 - 后面又扒到一个网盘挂载软件RaiDrive，支持TeraCloud提供的WebDAV服务，但是对环境好像有一定要求，我Win11的电脑安装成功了，Win10的电脑一直报错。建议先试试RaiDrive，RaiDrive可以将TeraCloud挂载到本地磁盘，文件操作比GoodSync方便一点，RaiDrive如果装不了再用GoodSync叭。
 
 

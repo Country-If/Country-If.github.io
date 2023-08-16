@@ -51,7 +51,7 @@ Teracloud([https://teracloud.jp/en/](https://teracloud.jp/en/))是一家日本�
 
 - Teracloud的其他玩法
 Teracloud除了文献同步，也可以当做也云盘使用，可以配合一些同步软件使用，Teracloud官网给出了能使用WebDAV的各个终端使用的APP：([https://teracloud.jp/en/clients.html](https://teracloud.jp/en/clients.html))，比如GoodSync。
-参考本人的另一篇博客：[Teracloud其他玩法](https://country-if.github.io/posts/TeraCloud(GoodSync&RaiDrive))
+参考本人的另一篇博客：[Teracloud其他玩法](../TeraCloud(GoodSync&RaiDrive))
 
 
 
