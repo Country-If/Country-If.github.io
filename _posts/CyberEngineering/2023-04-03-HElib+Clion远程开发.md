@@ -19,28 +19,46 @@ pin: false
 ### Docker
 
 - Docker安装略
+
 - Docker创建容器
-	```
+	```shell
 	sudo docker run --privileged -it --name helib -p 12022:22 ubuntu:20.04 bash
 	```
 	命令解释：`--privileged`提高权限，不然可能没办法debug；`--name`指定容器名字；`-p`指定端口，用于服务器端口映射到Docker内端口，由于后续需要通过ssh连接Docker容器，故映射到**22**端口；使用的镜像为ubuntu:20.04，镜像随意；bash指定运行终端
 	PS. 可以加个`-v`参数指定挂载目录
+	
 - 进入Docker后，先退出然后再重启进入（想让容器一直运行不关闭我就这么干的）
-	```
+	```shell
 	在容器内：exit		# 退出后容器也会退出
 	sudo docker start helib		# 启动容器
 	sudo docker exec -it helib bash		# 进入容器，之后再退出容器也不会退出了
 	```
+	
 - 安装ssh等服务
-	```
-	apt update
-	apt install openssl openssh-server -y
-	echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
-	service ssh restart
-	passwd root		# 设置Docker容器的root密码，用于后续连接
-	```
+
+  - Ubuntu (sudo)
+
+      ```shell
+      apt update
+      apt install openssl openssh-server -y
+      echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+      service ssh restart
+      passwd root		# 设置Docker容器的root密码，用于后续连接
+      ```
+  
+  - CentOS (sudo)
+  
+    ```shell
+    yum install openssh-server		# 安装OpenSSH服务
+    systemctl enable sshd		# 启动SSH服务并设置为开机启动
+    systemctl start sshd
+    firewall-cmd --zone=public --add-port=22/tcp --permanent		# 开启SSH端口
+    firewall-cmd --reload
+    ```
+  
 - 测试连接
-	- 在Docker外，用ssh测试连接：`ssh root@localhost -p 12022`，输入Docker的root密码，成功如下：![welcome](/assets/img/f7b4d81a3d22432b8bcb8662ef8aecea.png)
+
+  - 在Docker外，用ssh测试连接：`ssh root@localhost -p 12022`，输入Docker的root密码，成功如下：![welcome](/assets/img/f7b4d81a3d22432b8bcb8662ef8aecea.png)
 
 
 
