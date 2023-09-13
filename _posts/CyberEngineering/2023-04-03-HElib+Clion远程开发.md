@@ -49,10 +49,10 @@ pin: false
   - CentOS (sudo)
   
     ```shell
-    yum install openssh-server		# 安装OpenSSH服务
-    systemctl enable sshd		# 启动SSH服务并设置为开机启动
+    yum install openssh-server    # 安装OpenSSH服务
+    systemctl enable sshd    # 启动SSH服务并设置为开机启动
     systemctl start sshd
-    firewall-cmd --zone=public --add-port=22/tcp --permanent		# 开启SSH端口
+    firewall-cmd --zone=public --add-port=22/tcp --permanent    # 开启SSH端口
     firewall-cmd --reload
     ```
   
