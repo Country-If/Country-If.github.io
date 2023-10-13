@@ -113,13 +113,14 @@ pin: false
 
 1. 免密登录
 
-- 在 cwRsync 路径下以管理员方式打开cmd，执行`ssh-keygen.exe -t dsa`，路径建议填在当前路径下，如`./id_dsa`，随后会生成两个文件：`id_dsa`和`id_dsa.pub`，将 pub 文件上传到服务器的 `~/.ssh` 中，执行`cat id_dsa.pub >> authorized_keys` 实现免密登录
+   - 在 cwRsync 路径下以管理员方式打开cmd，执行`ssh-keygen.exe -t dsa`，路径建议填在当前路径下，如`./id_dsa`，随后会生成两个文件：`id_dsa`和`id_dsa.pub`，将 pub 文件上传到服务器的 `~/.ssh` 中，执行`cat id_dsa.pub >> authorized_keys` 实现免密登录
 
-  ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202310112354030.png)
+     ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202310112354030.png)
 
-  - 上一步中若找不到`.ssh`文件夹，使用`ssh localhost`命令 (若没有ssh则执行`apt intall openssh-client`)
+     - 上一步中若找不到`.ssh`文件夹，使用`ssh localhost`命令 (若没有ssh则执行`apt intall openssh-client`)
 
-    ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202310120000285.png)
+       ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202310120000285.png)
+
 
 2. ssh.exe (不建议)
 
