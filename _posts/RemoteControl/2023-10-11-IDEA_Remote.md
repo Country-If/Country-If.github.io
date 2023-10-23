@@ -126,6 +126,10 @@ pin: false
 
 - 将`C:/Windows/System32/OpenSSH`中的`ssh.exe`文件复制到`cwRsync`中替换掉`ssh.exe`
 
+## 最后
+
+- 相比起Jetbrains的其他产品，如CLion和Pycharm，由于Windows和Linux路径定义和符号规则等差异，Windows下的IDEA连接远程服务器使用起来并不方便，因此建议还在Mac下或者Linux虚拟机里使用IDEA
+
 ## 参考
 
 > [IDEA Run Target远程执行Java & Debug-CSDN](https://blog.csdn.net/chike0039/article/details/120862392)
