@@ -1,5 +1,5 @@
 ---
-title: 云端Docker搭建HElib库以及本地Clion远程开发
+title: 云端Docker搭建HElib库以及本地CLion远程开发
 date: 2023-04-03 17:00:00 +0800
 categories: [Cyber Engineering]
 tags: [cyber engineering]
