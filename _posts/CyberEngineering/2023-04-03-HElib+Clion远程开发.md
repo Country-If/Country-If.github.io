@@ -1,5 +1,5 @@
 ---
-title: 云端Docker搭建ABY库以及本地Clion远程开发
+title: 云端Docker搭建HElib库以及本地Clion远程开发
 date: 2023-04-03 17:00:00 +0800
 categories: [Cyber Engineering]
 tags: [cyber engineering]
@@ -29,7 +29,7 @@ pin: false
 
 ## Clion配置
 
-- Clion挂载Docker，详细请移步：[Clion_Connect_Remote_Server(Docker)]()
+- Clion挂载Docker，详细请移步：[Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
 
 - 挂载项目目录，修改Mapping
 
@@ -46,4 +46,3 @@ pin: false
 
 	![include](/assets/img/2d8b64ec6d7b4a58b5d42aa656b39311.png)
 
-> https://blog.csdn.net/xiaomu_347/article/details/126762754)

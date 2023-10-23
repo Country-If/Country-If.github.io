@@ -1,5 +1,5 @@
 ---
-title: Clion Connect Remote Server(Docker)
+title: Clion Connect Remote Server (Docker)
 date: 2023-04-03 16:00:00 +0800
 categories: [Remote Control]
 tags: [remote control]
@@ -16,7 +16,12 @@ pin: false
 
 ### Docker
 
-- Docker安装略
+- Docker安装 (仅供参考)
+
+  ```bash
+  curl -sSL https://get.docker.com/ | sh
+  sudo chmod 777 /var/run/docker.sock
+  ```
 
 - Docker创建容器
 	```shell
