@@ -7,8 +7,6 @@ pin: false
 
 ---
 
-# Pycharm Connect Remote Server
-
 ## Pre-Setting
 
 - Ubuntu install Anaconda: [CSDN](https://blog.csdn.net/weixin_40964777/article/details/126308001), path: /root/anaconda3
