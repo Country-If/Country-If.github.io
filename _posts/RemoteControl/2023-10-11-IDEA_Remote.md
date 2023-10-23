@@ -128,7 +128,7 @@ pin: false
 
 ## 最后
 
-- 相比起Jetbrains的其他产品，如CLion和Pycharm，由于Windows和Linux路径定义和符号规则等差异，Windows下的IDEA连接远程服务器使用起来并不方便，因此建议还在Mac下或者Linux虚拟机里使用IDEA
+- 相比起Jetbrains的其他产品，如CLion和Pycharm，由于Windows和Linux路径定义和符号规则等差异，Windows下的IDEA连接远程服务器使用起来并不方便，因此建议还是在Mac下或者Linux虚拟机里使用IDEA
 
 ## 参考
 
