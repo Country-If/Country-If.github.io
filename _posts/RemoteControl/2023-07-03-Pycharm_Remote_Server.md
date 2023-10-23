@@ -9,6 +9,7 @@ pin: false
 
 ## Pre-Setting
 
+- Ubuntu install Python Interpreter: [CSDN](https://blog.csdn.net/qq_63038961/article/details/129748586), path: /usr/bin/python (normally)
 - Ubuntu install Anaconda: [CSDN](https://blog.csdn.net/weixin_40964777/article/details/126308001), path: /root/anaconda3
 - Pycharm in Windows
 
@@ -40,6 +41,6 @@ pin: false
 
   - Step 2: Next
 
-  - Step 3: choose System Interpreter, Interpreter select the Python interpreter in anaconda path, Sync folders select the server path where to save the files, Create
+  - Step 3: choose System Interpreter, Interpreter select the Python interpreter in **anaconda path (or other python interpreter path)**, Sync folders select the server path where to save the files, Create
 
     ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202307031055305.png)
