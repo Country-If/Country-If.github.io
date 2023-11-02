@@ -17,9 +17,16 @@ pin: false
 
 ## Docker内配置HElib库
 > 参考官方文档：[HElib/INSTALL.md](https://github.com/homenc/HElib/blob/master/INSTALL.md)
-- apt安装依赖：g++, cmake这些
+- apt安装依赖
+
+  ```bash	
+  apt update && apt install git g++ make cmake clang-format m4 patchelf -y
+  ```
+
 - 克隆项目，在Docker内或者在Docker外对应挂载的目录下克隆都行
+
 - 按照官网教程编译（编译就行，不需要make install）后，在build路径下会得到一个目录`helib_pack`，建议将其放至全局变量里：`cp -r helib_pack /usr/local`，这样在编译自己写的程序时不需要指定路径，在Clion里也能检测到这些依赖
+
 - 测试部分参考：[HElib/examples/README.md](https://github.com/homenc/HElib/blob/master/examples/README.md)
 
 - 自己编写程序时，注意CMakeList.txt的写法，注意文件路径是否写对，自己编写的程序路径不同，CMakeList就需要修改对应的路径，下面是我的CMakeList，大概能改的地方圈出来了
