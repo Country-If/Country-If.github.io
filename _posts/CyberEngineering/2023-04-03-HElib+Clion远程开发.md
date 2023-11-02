@@ -25,12 +25,56 @@ pin: false
 
 - 克隆项目，在Docker内或者在Docker外对应挂载的目录下克隆都行
 
-- 按照官网教程编译（编译就行，不需要make install）后，在build路径下会得到一个目录`helib_pack`，建议将其放至全局变量里：`cp -r helib_pack /usr/local`，这样在编译自己写的程序时不需要指定路径，在Clion里也能检测到这些依赖
+- 编译安装依赖库 (安装到系统环境)
 
-- 测试部分参考：[HElib/examples/README.md](https://github.com/homenc/HElib/blob/master/examples/README.md)
+  ```bash
+  mkdir build && cd build
+  cmake -DPACKAGE_BUILD=ON .. && make -j50 && make install
+  ```
 
-- 自己编写程序时，注意CMakeList.txt的写法，注意文件路径是否写对，自己编写的程序路径不同，CMakeList就需要修改对应的路径，下面是我的CMakeList，大概能改的地方圈出来了
-![CMakeList](/assets/img/144c6834fa6c46449f0f51cd74465eec.png)
+  注：
+
+  1. make中，`-j50`指定线程数，可以不加或者自行调整
+  2. 安装后的路径在`/usr/local/helib_pack`
+  3. 安装后HElib就没用了，可以删掉HElib目录 (但建议还是留着...)
+
+- 测试用例：[HElib/examples/README.md](https://github.com/homenc/HElib/blob/master/examples/README.md)
+
+- 下面给出我自己的测试过程：
+
+  - 测试代码：HElib_test.cpp
+
+    ```cpp
+    #include <helib/helib.h>
+    
+    int main() {
+        return 0;
+    }
+    ```
+
+  - 写一个CMakeLists.txt
+
+    ```cmake
+    cmake_minimum_required(VERSION 3.12)
+      
+    set(CMAKE_CXX_STANDARD 17)
+    
+    project(Prj LANGUAGES CXX)	# 设置项目名
+    
+    # set up HElib
+    find_package(helib 2.2.0 EXACT REQUIRED)	# 引入HElib
+    
+    add_executable(H HElib_test.cpp)	# 创建可执行文件
+    target_link_libraries(H helib)	# 链接HElib库
+    ```
+
+  - 编译测试
+
+    ```bash
+    mkdir build && cd build
+    cmake .. && make
+    ./H
+    ```
 
 
 
