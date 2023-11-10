@@ -73,6 +73,12 @@ pin: false
 
 ## SSH配置
 
+### 服务器上配置
+
+移步：[Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
+
+### 本地IDEA配置
+
 1. 添加SSH
 
    - Editor Configurations -> Manage Targets -> Add SSH, 填写Host, Port(Docker的话填容器22端口对外映射的宿主机端口), Username, Password

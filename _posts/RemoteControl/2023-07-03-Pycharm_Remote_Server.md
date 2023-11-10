@@ -17,7 +17,7 @@ pin: false
 
 ## Server Setting
 
-see previous blog: [Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
+See previous blog: [Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
 
 
 
