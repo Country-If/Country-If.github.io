@@ -13,6 +13,14 @@ pin: false
 - Ubuntu install Anaconda: [CSDN](https://blog.csdn.net/weixin_40964777/article/details/126308001), path: /root/anaconda3
 - Pycharm in Windows
 
+
+
+## Server Setting
+
+see previous blog: [Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
+
+
+
 ## Pycharm Setting
 
 ### Set up Deployment
