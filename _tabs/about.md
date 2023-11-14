@@ -15,7 +15,7 @@ order: 4
 ## Stats
 <!-- &hide=stars,commits,prs,issues,contribs -->
 <!-- &theme=dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula -->
-[![Maylon's GitHub stats (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api?username=Country-If&show_icons=true&theme=radical)](https://github.com/Country-If)
+[![Maylon's GitHub stats (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api?username=Country-If&show_icons=true&theme=radical&include_all_commits=true)](https://github.com/Country-If)
 
 <!-- ?hide=language1,language2 -->
 <!-- &layout=compact -->
