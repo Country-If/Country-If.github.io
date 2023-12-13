@@ -10,15 +10,15 @@ layout: default
   <div id="core-wrapper" class="col-12 col-lg-11 col-xl-9 pr-xl-4">
     <div class="post pl-1 pr-1 pl-md-2 pr-md-2">
 
-    {% capture _content %}
+      {% capture _content %}
       {% if layout.refactor or page.layout == 'page' %}
-        {% include refactor-content.html content=content %}
+      {% include refactor-content.html content=content %}
       {% else %}
-        {{ content }}
+      {{ content }}
       {% endif %}
-    {% endcapture %}
+      {% endcapture %}
 
-    {% if page.layout == 'page' or page.collection == 'tabs' %}
+      {% if page.layout == 'page' or page.collection == 'tabs' %}
       {% assign tab_key = page.title | downcase %}
       {% assign title = site.data.locales[site.lang].tabs[tab_key] | default: page.title %}
       <h1 class="dynamic-title">
@@ -27,9 +27,9 @@ layout: default
       <div class="post-content">
         {{ _content }}
       </div>
-    {% else %}
+      {% else %}
       {{ _content }}
-    {% endif %}
+      {% endif %}
 
     </div>
   </div> <!-- #core-wrapper -->
@@ -43,8 +43,8 @@ layout: default
     </div>
 
     {% for _include in layout.panel_includes %}
-      {% assign _include_path = _include | append: '.html' %}
-      {% include {{ _include_path }} %}
+    {% assign _include_path = _include | append: '.html' %}
+    {% include {{ _include_path }} %}
     {% endfor %}
   </div>
 
@@ -55,8 +55,8 @@ layout: default
 <div class="row">
   <div id="tail-wrapper" class="col-12 col-lg-11 col-xl-9 pl-3 pr-3 pr-xl-4 mt-5">
     {% for _include in layout.tail_includes %}
-      {% assign _include_path = _include | append: '.html' %}
-      {% include {{ _include_path }} %}
+    {% assign _include_path = _include | append: '.html' %}
+    {% include {{ _include_path }} %}
     {% endfor %}
   </div>
 </div>
