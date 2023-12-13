@@ -214,7 +214,28 @@ gitalk:
 
 - 去对应主题的Github上，把缺的文件夹拷贝到自己的仓库里
 
-### 其他问题可以在Gitalk的issue中找到回答
+### 评论文字是白色看不见的问题
 
-- [ 评论区文字框在键入一个字符后，无法继续键入字符的问题](https://github.com/gitalk/gitalk/issues/472)
-- [评论文字是白色看不见的问题](https://github.com/gitalk/gitalk/issues/511)
+- 深色模式下，可能会出现在评论区键入文字时文字显示异常的问题。[ISSUE-511](https://github.com/gitalk/gitalk/issues/511)中给出了一些解决办法
+
+- 我的解决方案如下：
+
+  修改`_layouts/post.html`文件，在注册Gitalk时插入全局样式
+
+  ```html
+    <style lang="scss">
+      .gt-header-textarea {
+    color: #000 !important;
+      }
+    </style>
+  ```
+
+  ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202312132128432.png)
+
+### 评论区文字框在键入一个字符后，无法继续键入字符的问题
+
+- emmm这个是由grammarly的插件导致的，目前的解决办法只有禁用该插件
+
+### 其他问题
+
+- 到[Issues区](https://github.com/gitalk/gitalk/issues)查查有无解决办法
