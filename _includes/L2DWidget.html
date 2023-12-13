@@ -1,4 +1,3 @@
-<div>
   <script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script>
   <script type="text/javascript">
     L2Dwidget
@@ -47,4 +46,3 @@
         }
       });
   </script>
-</div>
