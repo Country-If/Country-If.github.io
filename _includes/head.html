@@ -3,7 +3,8 @@
 -->
 
 <head>
-  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+    type="text/javascript"></script>
   <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
           tex2jax: {
@@ -13,54 +14,103 @@
       });
   </script>
 
+  <script src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script>
+  <script type="text/javascript">
+    L2Dwidget
+      .on('*', (name) => {
+        console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
+      })
+      .init({
+        "model": {
+          jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+          //如果要换模型修改 live2d-widget-model-hibiki
+          //以及 assets后面的hibiki.model.json 其中bibiki为model名字
+          //参考文献[参考文献](https://www.hxahr.cn/2019/09/04/%E6%B2%99%E9%9B%95%E7%9C%8B%E6%9D%BF%E5%A8%98/ "参考文献")
+          "scale": 0.8
+        },
+
+        display: {
+          // 居左
+          "position": "right",
+          // 宽度
+          "width": 200,
+          // 高度
+          "height": 300,
+          // 距左右
+          "hOffset": 35,
+          // 距下
+          "vOffset": -20
+        },
+
+        mobile: {
+          // 移动端，false为关闭
+          "show": true,
+          "scale": 0.5
+        },
+
+        dialog: {
+          // 开启对话框，false为关闭
+          enable: true,
+          script: {
+            // 每空闲 10 秒钟，显示一条一言
+            'every idle 10s': '$hitokoto$',
+            // 当触摸到角色身体
+            'tap body': '哎呀！别碰我！',
+            // 当触摸到角色头部
+            'tap face': '人家已经不是小孩子了！'
+          }
+        }
+      });
+  </script>
+
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   {% if page.layout == 'home' or page.layout == 'post' %}
 
-    {% if site.google_analytics.pv.proxy_endpoint %}
-      <meta name="pv-proxy-endpoint" content="{{ site.google_analytics.pv.proxy_endpoint }}">
-    {% endif %}
+  {% if site.google_analytics.pv.proxy_endpoint %}
+  <meta name="pv-proxy-endpoint" content="{{ site.google_analytics.pv.proxy_endpoint }}">
+  {% endif %}
 
-    {% if site.google_analytics.pv.cache_path %}
-      <meta name="pv-cache-path" content="{{ site.google_analytics.pv.cache_path | relative_url }}">
-    {% endif %}
+  {% if site.google_analytics.pv.cache_path %}
+  <meta name="pv-cache-path" content="{{ site.google_analytics.pv.cache_path | relative_url }}">
+  {% endif %}
 
   {% endif %}
 
   {% capture seo_tags %}
-    {% seo title=false %}
+  {% seo title=false %}
   {% endcapture %}
 
   {% if page.image %}
-    {% assign img = page.image.path | default: page.image %}
+  {% assign img = page.image.path | default: page.image %}
 
-    {% unless img contains '://' %}
-      {% assign img_path = page.img_path | append: '/' | append: img | replace: '//', '/' %}
-      {% capture target %}"{{ img | absolute_url }}"{% endcapture %}
+  {% unless img contains '://' %}
+  {% assign img_path = page.img_path | append: '/' | append: img | replace: '//', '/' %}
+  {% capture target %}"{{ img | absolute_url }}"{% endcapture %}
 
-      {% if site.img_cdn contains '//' %}
-        <!-- it's a cross-origin URL -->
-        {% capture replacement %}"{{ site.img_cdn }}{{ img_path }}"{% endcapture %}
-      {% else %}
-        <!-- it's a local file path -->
-        {%- capture replacement -%}
-          "{{ site.img_cdn | append: '/' | append: img_path | replace: '//', '/' | absolute_url }}"
-        {%- endcapture -%}
-      {% endif %}
+  {% if site.img_cdn contains '//' %}
+  <!-- it's a cross-origin URL -->
+  {% capture replacement %}"{{ site.img_cdn }}{{ img_path }}"{% endcapture %}
+  {% else %}
+  <!-- it's a local file path -->
+  {%- capture replacement -%}
+  "{{ site.img_cdn | append: '/' | append: img_path | replace: '//', '/' | absolute_url }}"
+  {%- endcapture -%}
+  {% endif %}
 
-      {% assign seo_tags = seo_tags | replace: target, replacement %}
+  {% assign seo_tags = seo_tags | replace: target, replacement %}
 
-    {% endunless %}
+  {% endunless %}
 
   {% endif %}
 
   {{ seo_tags }}
 
   <title>
-  {%- unless page.layout == "home" -%}
+    {%- unless page.layout == "home" -%}
     {{ page.title | append: " | "}}
-  {%- endunless -%}
+    {%- endunless -%}
     {{ site.title }}
   </title>
 
@@ -68,34 +118,34 @@
 
   {% if site.resources.ignore_env != jekyll.environment and site.resources.self_hosted %}
 
-    <link href="{{ site.data.assets[origin].webfonts | relative_url }}" rel="stylesheet">
+  <link href="{{ site.data.assets[origin].webfonts | relative_url }}" rel="stylesheet">
 
   {% else %}
 
-    {% for cdn in site.data.assets[origin].cdns %}
-      <link rel="preconnect" href="{{ cdn.url }}" {{ cdn.args }}>
-      <link rel="dns-prefetch" href="{{ cdn.url }}" {{ cdn.args }}>
-    {% endfor %}
+  {% for cdn in site.data.assets[origin].cdns %}
+  <link rel="preconnect" href="{{ cdn.url }}" {{ cdn.args }}>
+  <link rel="dns-prefetch" href="{{ cdn.url }}" {{ cdn.args }}>
+  {% endfor %}
 
-    <link rel="stylesheet" href="{{ site.data.assets[origin].webfonts | relative_url }}">
+  <link rel="stylesheet" href="{{ site.data.assets[origin].webfonts | relative_url }}">
 
   {% endif %}
 
   <!-- GA -->
   {% if jekyll.environment == 'production'
-      and site.google_analytics.id != empty and site.google_analytics.id %}
-    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
-    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+  and site.google_analytics.id != empty and site.google_analytics.id %}
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="use-credentials">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
 
-    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
-    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous">
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-    {% if site.google_analytics.pv.proxy_endpoint %}
-      {% assign proxy_url = site.google_analytics.pv.proxy_endpoint
-          | replace: "https://", "" | split: "/" | first | prepend: "https://" %}
-      <link rel="preconnect" href="{{ proxy_url }}" crossorigin="use-credentials">
-      <link rel="dns-prefetch" href="{{ proxy_url }}">
-    {% endif %}
+  {% if site.google_analytics.pv.proxy_endpoint %}
+  {% assign proxy_url = site.google_analytics.pv.proxy_endpoint
+  | replace: "https://", "" | split: "/" | first | prepend: "https://" %}
+  <link rel="preconnect" href="{{ proxy_url }}" crossorigin="use-credentials">
+  <link rel="dns-prefetch" href="{{ proxy_url }}">
+  {% endif %}
   {% endif %}
 
   <!-- Bootstrap -->
@@ -107,12 +157,12 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
   {% if site.toc and page.toc %}
-    <link rel="stylesheet" href="{{ site.data.assets[origin].bootstrap-toc.css | relative_url }}">
+  <link rel="stylesheet" href="{{ site.data.assets[origin].bootstrap-toc.css | relative_url }}">
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
-    <!-- Manific Popup -->
-    <link rel="stylesheet" href="{{ site.data.assets[origin].magnific-popup.css | relative_url }}">
+  <!-- Manific Popup -->
+  <link rel="stylesheet" href="{{ site.data.assets[origin].magnific-popup.css | relative_url }}">
   {% endif %}
 
   <!-- JavaScript -->
@@ -120,6 +170,6 @@
   <script src="{{ site.data.assets[origin].jquery.js | relative_url }}"></script>
 
   {% unless site.theme_mode %}
-    {% include mode-toggle.html %}
+  {% include mode-toggle.html %}
   {% endunless %}
 </head>
