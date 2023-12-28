@@ -8,7 +8,12 @@ pin: false
 
 # IDEA远程连接服务器
 
-### 前言
+## 环境
+
+- IDEA装在本地Windows 11
+- 远程服务器Ubuntu 20.04
+
+## 前言
 
 - 实现的功能是，用本地的JDK编译代码，将class文件上传到服务器上运行
 - 服务器上必需：rsync, openssh-server, openssl

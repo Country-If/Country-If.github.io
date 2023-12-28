@@ -11,6 +11,11 @@ pin: true
 - 为了不混淆生产环境，使用Docker搭建运行环境
 - 在本地CLion中编写代码，在远程服务器的Docker里运行代码
 
+## 环境
+
+- Clion装在本地Windows 11
+- 远程服务器Ubuntu 20.04
+
 ## Clion连接服务器内的Docker
 
 

@@ -9,6 +9,7 @@ pin: false
 
 ## Pre-Setting
 
+- Remote Server: Ubuntu 20.04
 - Ubuntu install Python Interpreter: [CSDN](https://blog.csdn.net/qq_63038961/article/details/129748586), path: /usr/bin/python (normally)
 - Ubuntu install Anaconda: [CSDN](https://blog.csdn.net/weixin_40964777/article/details/126308001), path: /root/anaconda3
 - Pycharm in Windows
