@@ -7,6 +7,15 @@ pin: true
 ---
 
 
+### Run Locally (Strongly recommended)
+
+1. Install Git, Ruby, RubyGems. See: [搭建个人博客(Jekyll+Github)](https://blog.csdn.net/m0_46578941/article/details/126489793)
+2. Clone your github.io repository
+3. cd in the repository
+4. `bundle install`
+5. `bundle exec jekyll server`
+6. Open web browser, visit: [http://localhost:4000](http://localhost:4000)
+
 ## Installation
 
 ### Creating a New Site
@@ -34,15 +43,6 @@ Configure the *Pages* service.
 
 1. Browse to your repository on GitHub. Select the tab *Settings*, then click *Pages* in the left navigation bar. Then, in the **Source** section (under *Build and deployment*), select [**GitHub Actions**](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow) from the dropdown menu.
 2. Push any commits to GitHub to trigger the *Actions* workflow. In the *Actions* tab of your repository, you should see the workflow *Build and Deploy* running. Once the build is complete and successful, the site will be deployed automatically.
-
-### Run Locally
-
-1. Install Git, Ruby, RubyGems. See: [搭建个人博客(Jekyll+Github)](https://blog.csdn.net/m0_46578941/article/details/126489793)
-2. Clone your github.io repository
-3. cd in the repository
-4. `bundle install`
-5. `bundle exec jekyll server`
-6. Open web browser, visit: [http://localhost:4000](http://localhost:4000)
 
 ## Reference
 
