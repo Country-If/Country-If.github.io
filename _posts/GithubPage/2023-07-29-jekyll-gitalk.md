@@ -59,23 +59,24 @@ gitalk:
 #### _layouts/post.html -> 注册Gitalk插件
 
 ```html
-  <div id="gitalk-container"></div>
-  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-  <script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script> 
-  <script src="/js/md5.min.js"></script>
-  <script type="text/javascript">
+
+<div id="gitalk-container"></div>
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="/js/md5.min.js"></script>
+<script type="text/javascript">
     var gitalk = new Gitalk({
-    clientID: '自己的Client ID',
-    clientSecret: '自己的Client secret',
-    repo: '评论存放的仓库名称',
-    owner: 'Github ID/username',
-    admin: ['同owner, 也可添加其他管理员'],
-    id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]),
-    language: 'en',
-    perPage: 10,
+        clientID: '自己的Client ID',
+        clientSecret: '自己的Client secret',
+        repo: '评论存放的仓库名称',
+        owner: 'Github ID/username',
+        admin: ['同owner, 也可添加其他管理员'],
+        id: md5(location.href.match('/(?<=posts/)(.*)(?=/)/')[1]),
+        language: 'en',
+        perPage: 10,
     });
     gitalk.render('gitalk-container');
-  </script>
+</script>
 ```
 
 - `ClientID`到`admin`的选项需要填写自己的内容，注意！引号需要保留！
