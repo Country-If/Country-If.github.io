@@ -55,6 +55,7 @@ bundle install
 bundle exec jekyll server
 ```
 6. 浏览器访问: [http://localhost:4000](http://localhost:4000)
+7. 云端更新：使用Git Bash或者Github Desktop等，推送 **修改的文件** 到Github仓库
 
 ## Codespaces 本地运行
 
@@ -91,9 +92,12 @@ bundle exec jekyll server
 - 在vscode的Port中，打开浏览器访问
   ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202401041405408.png)
 
+### 云端更新
+![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202401041425922.png)
+
 ### 注意事项
 
-Codespaces使用后需要关闭，否则会一直计费，关闭方法： 
+Codespaces使用后需要关闭，否则会一直计费 (访问 [Billing](https://github.com/settings/billing/summary) 查看自己的Codespaces额度)，关闭方法： 
 
 在 `Codespaces` 页面中，点击 `...`，点击 `Stop Codespaces`，等待关闭
 
