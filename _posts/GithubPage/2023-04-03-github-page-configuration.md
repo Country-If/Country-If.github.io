@@ -39,8 +39,18 @@ Configure the *Pages* service.
 1. Install Git, Ruby, RubyGems. See: [搭建个人博客(Jekyll+Github)](https://blog.csdn.net/m0_46578941/article/details/126489793)
 2. Clone your github.io repository
 3. cd in the repository
-4. `bundle install`
-5. `bundle exec jekyll server`
+4. bundle install
+```bash 
+bundle install
+```
+   - if connection timeout, try: 
+  ```bash
+   bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+   ```
+5. start local server
+```bash
+bundle exec jekyll server
+```
 6. Open web browser, visit: [http://localhost:4000](http://localhost:4000)
 
 ## Reference
