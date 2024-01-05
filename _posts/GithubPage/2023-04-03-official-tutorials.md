@@ -3,7 +3,7 @@ title: Official Tutorials
 date: 2023-04-03 11:00:00 +0800
 categories: [Tutorial]
 tags: [github page]
-pin: true
+pin: false
 ---
 
 ## Here are several official tutorial links

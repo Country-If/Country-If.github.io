@@ -97,10 +97,16 @@ bundle exec jekyll server
 
 ### 注意事项
 
-Codespaces使用后需要关闭，否则会一直计费 (访问 [Billing](https://github.com/settings/billing/summary) 查看自己的Codespaces额度)，关闭方法： 
+- Codespaces使用后需要关闭，否则会一直计费 (访问 [Billing](https://github.com/settings/billing/summary) 查看自己的Codespaces额度)，关闭方法： 
 
-在 `Codespaces` 页面中，点击 `...`，点击 `Stop Codespaces`，等待关闭
+   在 `Codespaces` 页面中，点击 `...`，点击 `Stop Codespaces`，等待关闭
 
+- 官方教程还是读一遍，官方文档给出了撰写文章的格式，整理了官方的文档：[official-tutorials](../official-tutorials/)
+
+### 写作Tips
+先码这了，凑够篇幅再另水一篇
+- 交叉引用
+在一篇博客里引用自己的其他博客（这里指的是发在Github Page上的博客），超链接部分可以用相对路径：`[](../title)`，其中的 `title` 可以从博客的URL(`https://xxx.github.io/posts/title`)中截取
 
 ## 参考
 
