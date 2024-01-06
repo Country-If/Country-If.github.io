@@ -89,10 +89,6 @@ layout: page
 
 </div> <!-- #post-list -->
 
-{% if paginator.total_pages > 0 %}
-{% include post-paginator.html %}
-{% endif %}
-
 <div class="posts">
   {% for post in paginator.posts %}
   {% if post.visible== 1  %}
@@ -113,3 +109,7 @@ layout: page
   {% endif %}
   {% endfor %}
 </div>
+
+{% if paginator.total_pages > 0 %}
+{% include post-paginator.html %}
+{% endif %}
