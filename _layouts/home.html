@@ -93,17 +93,23 @@ layout: page
 {% include post-paginator.html %}
 {% endif %}
 
-{%- for post in site.posts -%}
-  {% if post.hide == null or post.hide == false %}
-    <li>
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-    <span class="post-meta">{{ post.date | date: date_format }}</span>
-    <h3>
-     <a class="post-link" href="{{ post.url | relative_url }}">
-      {{ post.title | escape }}
-     </a>
-     </h3>          
-    </li>
-  
+<div class="posts">
+  {% for post in paginator.posts %}
+  {% if post.visible== 1  %}
+
+  <div class="post">
+    <h1>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+        <a class="subtitle" href="{{ post.url }}">
+           {{ post.excerpt }}
+        </a>
+      </a>
+  </div>
   {% endif %}
-{%- endfor -%}
+  {% endfor %}
+</div>

@@ -4,7 +4,7 @@ date: 2023-04-03 10:00:00 +0800
 categories: [Tutorial]
 tags: [github page]
 pin: true
-hide: true
+visible: 1
 ---
 
 ## 云端部署
