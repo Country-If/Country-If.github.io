@@ -2,7 +2,7 @@
 title: CLion Connect Remote Server (Docker)
 date: 2023-04-03 16:00:00 +0800
 categories: [Remote Control]
-tags: [remote control]
+tags: [remote control, jetbrains]
 pin: true
 ---
 
