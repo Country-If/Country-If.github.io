@@ -10,12 +10,12 @@ pin: false
 
 ## 服务器端配置
 
-1. 安装Git，ssh等
+1. 安装Git，ssh等 (已安装可跳过)
 ```bash
 sudo apt update && sudo apt install git openssl openssh-server -y
 ```
 
-2. Git 用户配置
+2. Git 用户配置 (已配置可跳过)
 ```bash
 git config --global user.name "YOUR USERNAME"
 git config --global user.email "YOUR EMAIL"
