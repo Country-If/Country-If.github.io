@@ -2,7 +2,7 @@
 title: CLion Connect Remote Server (Docker)
 date: 2023-04-03 16:00:00 +0800
 categories: [Remote Control]
-tags: [remote control]
+tags: [remote control, jetbrains]
 pin: true
 ---
 
@@ -44,14 +44,20 @@ pin: true
 - 安装ssh等服务
 
   - Ubuntu (sudo)
-
-      ```shell
-      apt update
-      apt install openssl openssh-server -y
-      echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
-      service ssh restart
-      passwd root		# 设置Docker容器的root密码，用于后续连接
-      ```
+    ```shell
+    apt update && apt install openssl openssh-server -y
+    ```
+    后面依次选6，31
+    ```shell
+    echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+    ```
+    ```shell
+    service ssh restart
+    ```
+    设置Docker容器的root密码，用于后续连接：
+    ```shell
+    passwd root
+    ```
   
   - CentOS (sudo)
   

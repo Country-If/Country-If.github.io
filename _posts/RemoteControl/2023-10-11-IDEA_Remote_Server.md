@@ -2,7 +2,7 @@
 title: IDEA Connect Remote Server
 date: 2023-10-11 23:30:00 +0800
 categories: [Remote Control]
-tags: [remote control]
+tags: [remote control,jetbrains]
 pin: false
 ---
 

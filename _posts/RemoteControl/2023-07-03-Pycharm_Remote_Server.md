@@ -2,7 +2,7 @@
 title: Pycharm Connect Remote Server
 date: 2023-07-03 10:30:00 +0800
 categories: [Remote Control]
-tags: [remote control]
+tags: [remote control,jetbrains]
 pin: false
 
 ---
