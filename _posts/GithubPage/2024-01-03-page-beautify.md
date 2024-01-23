@@ -97,6 +97,7 @@ pin: false
   ```
 
 ## 点击特效
+### 爱心特效
 1. 在 `_layouts/default.html` 中添加下面的代码，放在了 `</body>` 前
   ```html
   <script type="text/javascript" src="/js/love_onClick.js"></script>
@@ -155,6 +156,12 @@ pin: false
     }(), n()
   }(window, document);
   ```
+
+### 其他点击特效
+> 参考：[网页鼠标点击特效案例收集-CSDN](https://blog.csdn.net/ungoing/article/details/125071691)
+
+- 可以直接自行复制代码，合并进 `_layouts/default.html`
+- 也可以将代码保存为 `.js` 文件，然后在 `_layouts/default.html` 中引入，如前面的爱心特效所示
 
 ## 页面细节优化
 
