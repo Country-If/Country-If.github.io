@@ -28,16 +28,16 @@ pin: true
   ```
 
 - Docker创建容器
-	```shell
-	sudo docker run --privileged -itd --name helib -p 12022:22 ubuntu:20.04 bash
-	```
+```shell
+sudo docker run --privileged -itd --name helib -p 12022:22 ubuntu:20.04 bash
+```
 	命令解释：`--privileged`提高权限，不然可能没办法debug；`--name`指定容器名字；`-p`指定端口，用于服务器端口映射到Docker内端口，由于后续需要通过ssh连接Docker容器，故映射到**22**端口；使用的镜像为ubuntu:20.04，镜像随意；bash指定运行终端
 	PS. 可以加个`-v`参数指定挂载目录
 	
 - 由于前面用了`-d`让容器在后台运行，所以需要用`exec`命令进入容器
-	```shell
-	sudo docker exec -it helib bash
-	```
+```shell
+sudo docker exec -it helib bash
+```
 	
 - 安装ssh等服务
 
