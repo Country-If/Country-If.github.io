@@ -13,13 +13,17 @@ order: 4
 - Email: maylonxu@foxmail.com
 
 ## Stats
-<!-- &hide=stars,commits,prs,issues,contribs -->
-<!-- &theme=dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula -->
-[![Maylon's GitHub stats (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api?username=Country-If&show_icons=true&theme=radical&include_all_commits=true)](https://github.com/Country-If)
+<div>
+  <a href="https://github.com/Country-If">
+    <img align="center" src="https://github-readme-stats-three-brown-35.vercel.app/api?username=Country-If&show_icons=true&theme=transparent&include_all_commits=true&hide_border=true"/>
+  </a>
+  <a href="https://github.com/Country-If">
+    <img align="center" src="https://github-readme-stats-three-brown-35.vercel.app/api/top-langs/?username=Country-If&hide=tcl,xslt,jupyter%20notebook,smarty&theme=transparent&layout=compact&hide_border=true"/>
+  </a>
+</div>
 
-<!-- ?hide=language1,language2 -->
-<!-- &layout=compact -->
-[![Maylon's Top Langs (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api/top-langs/?username=Country-If&hide=tcl,xslt,jupyter%20notebook,smarty&theme=tokyonight&layout=compact)](https://github.com/Country-If)
-
-<!-- icons: https://rahuldkjain.github.io/gh-profile-readme-generator/ -->
-
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Country-If/Country-If/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Country-If/Country-If/output/github-contribution-grid-snake.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/Country-If/Country-If/output/github-contribution-grid-snake.svg">
+</picture>
