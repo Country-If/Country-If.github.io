@@ -1,9 +1,8 @@
 name: generate animation
 
 on:
-  # run automatically every 24 hours
   schedule:
-    - cron: "57 23 * * *" 
+    - cron: "50 15 * * *"  # UTC+8: 23:50
 
 jobs:
   generate:
