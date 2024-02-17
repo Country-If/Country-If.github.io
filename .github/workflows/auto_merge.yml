@@ -1,9 +1,8 @@
 name: Merge Files from Output to Main
 
 on:
-  # run automatically every 24 hours
   schedule:
-    - cron: "0 0 * * *" 
+    - cron: "5 16 * * *"  # UTC+8: 0:05
 
 jobs:
   copy_files:
