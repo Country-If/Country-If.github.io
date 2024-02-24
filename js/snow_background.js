@@ -14,7 +14,7 @@
             var startPositionLeft = Math.random() * documentWidth - 100,
                 startOpacity = 0.5 + Math.random(),
                 sizeFlake = options.minSize + Math.random() * options.maxSize,
-                endPositionTop = documentHeight - 200,
+                endPositionTop = documentHeight,
                 endPositionLeft = startPositionLeft - 500 + Math.random() * 500,
                 durationFall = documentHeight * 10 + Math.random() * 5000;
             $flake.clone().appendTo('body').css({
