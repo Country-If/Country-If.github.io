@@ -2,7 +2,7 @@ name: Merge Files from Output to Main
 
 on:
   schedule:
-    - cron: "5 16 * * *"  # UTC+8: 0:05
+    - cron: "16 16 * * 0"  # UTC+8: 0:16, every Sunday
 
 jobs:
   copy_files:
