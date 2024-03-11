@@ -62,7 +62,7 @@ gitalk:
 
 <div id="gitalk-container"></div>
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk@latest/dist/gitalk.min.js"></script>
+<script src="/js/gitalk.min.js"></script>
 <script src="/js/md5.min.js"></script>
 <script type="text/javascript">
     var gitalk = new Gitalk({
