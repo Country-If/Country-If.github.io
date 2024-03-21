@@ -2,7 +2,8 @@ name: Merge Files from Output to Main
 
 on:
   schedule:
-    - cron: "16 16 * * 6"  # UTC+8: 0:16, every Sunday
+    - cron: "16 16 * * *"  # UTC+8: 0:16
+  workflow_dispatch:
 
 jobs:
   copy_files:
@@ -29,8 +30,8 @@ jobs:
     - name: Commit and Push Changes to Main Branch
       run: |
         cd main
-        git config --global user.email "2450854008@qq.com"
-        git config --global user.name "Country-If"
+        git config user.name "Actions Bot"
+        git config user.email "actions@github.com"
         git add assets/svg/
         git commit -m "Automated copy of files from output to main" || true
         git push origin HEAD:main || true
