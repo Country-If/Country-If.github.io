@@ -32,7 +32,7 @@ pin: false
 
   ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202133340.png)
 
-- 复制粘贴 [YML](https://github.com/MaylonXGT/sharelatex_sync_with_git/blob/master/Sync.yml) 中的内容，其中的cron我设定的是每四小时更新一次，可以自定义
+- 复制粘贴 [YML](https://github.com/MaylonXGT/sharelatex_sync_with_git/blob/master/sync/Sync.yml) 中的内容，其中的cron我设定的是每四小时更新一次，可以自定义
 
 - 手动触发一次以启动工作流
 ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202153114.png)
