@@ -1,7 +1,7 @@
 name: "Build and Deploy"
 on:
   schedule:
-    - cron: "40 16 * * 6"  # UTC+8: 0:40
+    - cron: "40 16 * * *"  # UTC+8: 0:40
 
   push:
     branches:
