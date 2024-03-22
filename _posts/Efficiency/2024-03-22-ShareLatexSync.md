@@ -9,7 +9,7 @@ pin: false
 
 ## 前言
 
-- 续上文 [Github自动同步Overleaf](/posts/OverleafSync)，将actions结合国内搭建的Overleaf，实现自动同步到GitHub
+- 续上文 [Github自动同步Overleaf](/posts/OverleafSync)，将actions结合国内搭建的Overleaf -- [ShareLatex](https://sharelatex.cstcloud.cn/project)，实现自动同步到GitHub。(Sharelatex支持多人协同编辑，优于普通版Overleaf)
 - 项目来源：还是这个项目：[overleaf_sync_with_git](https://github.com/subhamX/overleaf_sync_with_git)，由于大号fork过无法再fork了，用小号fork了一个，魔改成ShareLatex版本：[sharelatex_sync_with_git](https://github.com/MaylonXGT/sharelatex_sync_with_git)
 - 大部分配置在上文 [Github自动同步Overleaf](/posts/OverleafSync) 中，本文只简述异同点，配合 [上文](/posts/OverleafSync) 使用
 
