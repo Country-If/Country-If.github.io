@@ -1,21 +1,20 @@
 ---
 title: 多终端云同步文献管理：Zotero+TeraCloud（Windows+Android）
 date: 2023-08-16 10:00:00 +0800
-categories: [Efficiency]
-tags: [efficiency]
+categories: [Efficiency,Tools]
+tags: [efficiency,tools]
 pin: false
 ---
 
+
 # 前言
 - 最近刚在Windows和Android下搭建完zotero+teracloud，水一篇博客记录下，由于使用的云盘是日本的，所以搭建过程可能需要科学上网，不会科学上网的建议别看下去了，或者先去学下怎么科学上网。亦或是换个国内的网盘搭建，可以用坚果云，但是坚果云只能白嫖3G，Teracloud可以白嫖15G，所以看自己需要叭。
-
 
 
 # 软件/云盘
 
 ## Windows
 - 本人电脑使用的系统是Windows 10和Windows 11。
-
 
 
 ### Zotero
@@ -32,7 +31,6 @@ Zotero([https://www.zotero.org/](https://www.zotero.org/))是开源的文献管�
 安装这个插件建议置顶该插件，在谷歌学术查文献的时候，这个插件会变成文件夹的图标，点击后可以选中文献保存至zotero中。使用sci-hub读文献时，这个插件会变成文件的图标，点击可以将PDF保存至zotero中。
 - 第三方插件
 zotero还可以安装其他第三方的插件，比如翻译之类的，但是我自己用的有道词典有划线取词功能，然后还有一些跟知网有关的插件，但是我读英文文献居多，也就没搞了，有需求的扒下其他人的博客。
-
 
 
 ### Teracloud
@@ -54,11 +52,9 @@ Teracloud除了文献同步，也可以当做也云盘使用，可以配合一�
 参考本人的另一篇博客：[Teracloud其他玩法](../TeraCloud(GoodSync&RaiDrive))
 
 
-
 ## Android
 
 - 本人使用的Android设备是红米手机和以及华为平板Matebook 11。
-
 
 
 ### Zoo for Zotero
@@ -71,7 +67,6 @@ Teracloud除了文献同步，也可以当做也云盘使用，可以配合一�
 登录zotero账号后就可以同步zotero的文献条目，但是PDF是备份在Teracloud的，所以需要设置WebDAV，设置方式跟Windows端类似，略过，设置后即可下载和同步PDF。
 
 
-
 ### Xodo
 
 - 介绍
@@ -82,13 +77,11 @@ Xodo可以在不另开一个副本的情况下对原文件进行编辑，便于�
 Zoo for Zotero第一次打开PDF时可以选择打开方式，选择以Xodo打开即可。
 
 
-
 # 写在最后
 
 - 个人使用体验，搭建后使用了一段时间，多终端还是有其优势的，平时出门去图书馆可以不用带电脑，只需要带个平板，在学校排队做核酸的时候也可以用手机读文献。
 - 总结评价一下，首先Zotero肯定是个研党必备的文献管理工具，在电脑上可以直接用zotero自带的PDF阅读器阅读，也可以直接在上面做笔记。安卓端不管是手机还是平板，也有对应的软件可以阅读文献和做笔记。Teracloud作为多终端的桥梁，提供了更大容量的云盘存储，唯一缺点就是云盘在日本，连接偶尔会不太稳定，但是大部分情况下，我基本不挂梯也可以使用。
 - 觉得本文有用的话，注册个teracloud然后填个邀请码，让博主多薅点容量叭，谢谢各位佬了。
-
 
 
 # 参考

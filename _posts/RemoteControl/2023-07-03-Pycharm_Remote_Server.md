@@ -4,8 +4,8 @@ date: 2023-07-03 10:30:00 +0800
 categories: [Remote Control]
 tags: [remote control,jetbrains]
 pin: false
-
 ---
+
 
 ## Pre-Setting
 
@@ -15,11 +15,9 @@ pin: false
 - Pycharm in Windows
 
 
-
 ## Server Setting
 
 See previous blog: [Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
-
 
 
 ## Pycharm Setting

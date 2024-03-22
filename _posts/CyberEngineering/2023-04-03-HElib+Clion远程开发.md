@@ -4,15 +4,14 @@ date: 2023-04-03 17:00:00 +0800
 categories: [Cyber Engineering]
 tags: [cyber engineering]
 pin: false
-
 ---
+
 
 ## 需求
 - [HElib](https://github.com/homenc/HElib)库是用C++编写的同态加密开源库，一般在Linux下使用
 - 为了不混淆生产环境，使用Docker搭建HElib运行环境
 - 本地在Windows下开发，使用的IDE为Clion，本地无HElib运行环境
 - 综上，需求是，让CLion连接搭建好HElib的Docker上，在本地CLion中编写代码，在远程服务器的Docker里运行代码
-
 
 
 ## Docker内配置HElib库

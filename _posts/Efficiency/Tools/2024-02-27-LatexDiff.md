@@ -1,11 +1,11 @@
 ---
 title: 研究生工具—LatexDiff
 date: 2024-02-27 00:20:30 +0800
-categories: [Efficiency]
-tags: [efficiency, latex]
+categories: [Efficiency,Tools]
+tags: [efficiency,tools,latex]
 pin: false
-
 ---
+
 
 ## 介绍
 

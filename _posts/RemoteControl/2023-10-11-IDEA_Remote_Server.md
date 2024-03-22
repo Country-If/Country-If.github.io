@@ -6,6 +6,7 @@ tags: [remote control,jetbrains]
 pin: false
 ---
 
+
 # IDEA远程连接服务器
 
 ## 环境

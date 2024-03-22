@@ -1,11 +1,11 @@
 ---
 title: Github自动同步Overleaf
 date: 2024-03-20 00:20:30 +0800
-categories: [Efficiency]
-tags: [efficiency, latex]
+categories: [Efficiency,Tools]
+tags: [efficiency,latex,git,tools]
 pin: false
-
 ---
+
 
 ## 前言
 

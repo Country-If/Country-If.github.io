@@ -1,10 +1,11 @@
 ---
 title: Chrome访问新版Bing(需要代理)
 date: 2023-04-03 12:00:00 +0800
-categories: [Efficiency]
+categories: [Efficiency,Others]
 tags: [efficiency]
 pin: false
 ---
+
 
 CSDN被违规了，搬到Github...
 

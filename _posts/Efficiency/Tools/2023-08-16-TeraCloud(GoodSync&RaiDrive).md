@@ -1,11 +1,10 @@
 ---
 title: Teracloud其他玩法（GoodSync，RaiDrive）
 date: 2023-08-16 11:00:00 +0800
-categories: [Efficiency]
-tags: [efficiency]
+categories: [Efficiency,Tools]
+tags: [efficiency,tools]
 pin: false
 ---
-
 
 
 ## 前言

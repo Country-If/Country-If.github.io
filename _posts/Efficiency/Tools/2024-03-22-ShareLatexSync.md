@@ -1,11 +1,11 @@
 ---
 title: Github自动同步ShareLatex
 date: 2024-03-22 16:30:30 +0800
-categories: [Efficiency]
-tags: [efficiency, latex]
+categories: [Efficiency,Tools]
+tags: [efficiency,latex,git,tools]
 pin: false
-
 ---
+
 
 ## 前言
 
