@@ -55,6 +55,7 @@ git add diff.tex && git commit -m "add diff" && git push
 ### 注意
 #### Overleaf的使用
 - 建议是每写完一版，就创建一个副本，命名为版本号或者日期，方便后续对比差异（虽说用Git也能恢复但是还是麻烦一点）
+- 如果是使用 GitHub Action 进行同步的话，可以直接手动触发一次工作流以完成同步，参考：[OverleafSync](/posts/OverleafSync/#3-actions)
 
 #### Codespaces的使用
 - 文件同步
