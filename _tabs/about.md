@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## Information
+## Information $\quad$ <img src="https://emojis.slackmojis.com/emojis/images/1696534303/70363/doggotypingq.gif?1696534303" width="50">
 - Undergraduate: School of Computers, Guangdong University of Technology, Guangzhou, Guangdong, China (GDUT)
 - Postgraduate: School of Cyber Engineering, Xidian University, Xi'an, Shaanxi, China (XDU)
 - Blog: 
@@ -12,7 +12,7 @@ order: 4
   - [CSDN](https://blog.csdn.net/weixin_45824303)
 - Email: maylonxu@foxmail.com
 
-## Stats
+## Stats <img src="https://emojis.slackmojis.com/emojis/images/1588866973/8934/hellokittydance.gif?1588866973" width="70">
 <!-- &hide=stars,commits,prs,issues,contribs -->
 <!-- &theme=dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula -->
 [![Maylon's GitHub stats (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api?username=Country-If&show_icons=true&theme=transparent&include_all_commits=true&hide_border=true)](https://github.com/Country-If)
