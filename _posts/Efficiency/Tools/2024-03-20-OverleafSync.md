@@ -31,7 +31,7 @@ pin: false
 ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202116660.png)
 其中，`OVERLEAF_PROJECT_ID` 为Overleaf打开项目后网址中 `project/` 后的一串标识符，eg：若项目网址为`https://www.overleaf.com/project/abcdefg1234`，则 `OVERLEAF_PROJECT_ID` 为 `abcdefg1234`；`OVERLEAF_COOKIE` 需要通过开发者终端获取，在Overleaf网页上F12，如下图所指位置即为 `OVERLEAF_COOKIE`：
 ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202125833.png)
-(另外还能看到该cookies过期的时间，cookies过期后需要重新获取更新该secret值)
+(另外还能看到该cookies过期的时间，注意，当cookies过期后需要重新获取cookies值，并更新该secret值)
 
 #### 3. Actions
 - 在项目的根目录下，创建yml文件，路径为 `.github/workflow/FileName.yml`，`FileName` 可以自定义，yml文件前的路径是固定的，如下所示：
