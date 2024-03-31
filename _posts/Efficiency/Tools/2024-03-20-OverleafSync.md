@@ -30,8 +30,10 @@ pin: false
 - 创建两个secrets，分别名为 `OVERLEAF_COOKIE` 和 `OVERLEAF_PROJECT_ID`，如下图所示：
 ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202116660.png)
 其中，`OVERLEAF_PROJECT_ID` 为Overleaf打开项目后网址中 `project/` 后的一串标识符，eg：若项目网址为`https://www.overleaf.com/project/abcdefg1234`，则 `OVERLEAF_PROJECT_ID` 为 `abcdefg1234`；`OVERLEAF_COOKIE` 需要通过开发者终端获取，在Overleaf网页上F12，如下图所指位置即为 `OVERLEAF_COOKIE`：
-![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202125833.png)
-(另外还能看到该cookies过期的时间，注意，当cookies过期后需要重新获取cookies值，并更新该secret值)
+![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403311019136.png)
+> Cookies获取后请勿退出登录Overleaf，否则cookies可能被撤销导致失效
+>
+> 开发者还建议在获取cookies后，清除当前cookies并通过重新登录以开启一个新会话，保持cookies不需要更新至少维持2个月 (这需要使用到cookie-editor等插件，当然，我并不认为需要这样做，我的actions始于2024.3.20，原有效时间为一周，目前仍正常运行，更新于2024.3.31)
 
 #### 3. Actions
 - 在项目的根目录下，创建yml文件，路径为 `.github/workflow/FileName.yml`，`FileName` 可以自定义，yml文件前的路径是固定的，如下所示：
