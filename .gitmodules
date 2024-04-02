@@ -1,3 +1,7 @@
 [submodule "assets/lib"]
 	path = assets/lib
 	url = https://github.com/cotes2020/chirpy-static-assets.git
+[submodule "reference"]
+	path = reference
+	url = https://github.com/jaywcjlove/reference.git
+	branch = gh-pages
