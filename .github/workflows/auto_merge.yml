@@ -1,11 +1,8 @@
 name: Merge Files from Output to Main
 
-env:
-  TZ: Asia/Shanghai  # 设置时区
-
 on:
   schedule:
-    - cron: "16 0 * * *"
+    - cron: "16 16 * * *"  # UTC+8: 0:16
   workflow_dispatch:
 
 jobs:
