@@ -19,7 +19,7 @@ order: 4
 
 <!-- ?hide=language1,language2 -->
 <!-- &layout=compact -->
-[![Maylon's Top Langs (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api/top-langs/?username=Country-If&hide=tcl,xslt,jupyter%20notebook,smarty&theme=transparent&layout=compact&hide_border=true)](https://github.com/Country-If)
+[![Maylon's Top Langs (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api/top-langs/?username=Country-If&hide=tcl,xslt,jupyter%20notebook,smarty,tex&theme=transparent&layout=compact&hide_border=true)](https://github.com/Country-If)
 
 <!-- icons: https://rahuldkjain.github.io/gh-profile-readme-generator/ -->
 
