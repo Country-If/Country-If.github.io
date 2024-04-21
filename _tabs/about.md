@@ -5,12 +5,19 @@ order: 4
 ---
 
 ## Information $\quad$ <img src="https://emojis.slackmojis.com/emojis/images/1696534303/70363/doggotypingq.gif?1696534303" width="50">
-- Undergraduate: School of Computers, Guangdong University of Technology, Guangzhou, Guangdong, China (GDUT)
-- Postgraduate: School of Cyber Engineering, Xidian University, Xi'an, Shaanxi, China (XDU)
-- Blog: 
+- Education
+
+  |                | Undergraduate                             | Postgraduate                     |
+  | :------------: | :---------------------------------------: | :------------------------------: |
+  | **University** | Guangdong University of Technology (GDUT) | Xidian University (XDU) <!--(Exempt from Admission Exam)-->         |
+  | **Department** | School of Computers                       | School of Cyber Engineering      |
+  | **Major**      | Information Security                      | Network and Information Security |
+  | **Location**   | Information Security                      | Xi'an, Shaanxi, China            |
+  | **Degree**     | Bachelor's Degree of Engineering          | Master's Degree of Engineering   |
+
+- Blog
   - [Github Page](https://Country-If.github.io)
   - [CSDN](https://blog.csdn.net/weixin_45824303)
-- Email: maylonxu@foxmail.com
 
 ## Stats <img src="https://emojis.slackmojis.com/emojis/images/1588866973/8934/hellokittydance.gif?1588866973" width="70">
 <!-- &hide=stars,commits,prs,issues,contribs -->
