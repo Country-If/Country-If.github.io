@@ -28,7 +28,7 @@ pin: false
 - 创建两个secrets，分别名为 `SHARELATEX_COOKIE` 和 `SHARELATEX_PROJECT_ID`，其中，`SHARELATEX_PROJECT_ID` 和 `SHARELATEX_COOKIE` 的获取方式与 [前文](/posts/OverleafSync) 一样
 
 #### 3. Actions
-- 在项目的根目录下，创建yml文件，路径为 `.github/workflow/FileName.yml`，`FileName` 可以自定义，yml文件前的路径是固定的，如下所示：
+- 在项目的根目录下，创建yml文件，路径为 `.github/workflows/FileName.yml`，`FileName` 可以自定义，yml文件前的路径是固定的，如下所示：
 
   ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202133340.png)
 
