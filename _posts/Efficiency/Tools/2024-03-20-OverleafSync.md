@@ -7,39 +7,6 @@ pin: false
 ---
 
 
-## TODO
-
-### 该Action占用github的shared storage问题
-
-- 这个TODO比较急，但是暂时没时间整，先记录，写在了前面，这边建议按此教程配置的**先停用对应的工作流** (对应仓库Actions -> 左边选择工作流 -> ... -> disable workflow)，以免造成额度浪费，待我有空更新解决方案 😭
-- 通过usage report，我发现action中的upload-artifact这个组件会使用shared storage，目前我的处理方法：先disable该同步的工作流，我修改了其中的cron，从一天四次改为一天一次
-- 另外，我注意到，actions/upload-artifact已经发布最新版本v4，而当前还在使用v2，不清楚新版本有无对shared storage做优化，但是也更新一下版本，新yml配置见 [YML](https://github.com/Country-If/Country-If/blob/main/public_files/sync_overleaf.yml)
-- 查阅了一些方案，可能的解决办法如下：
-  1. 修改artifact存储时间：对应仓库settings -> Actions -> General -> Artifact and log retention -> 从原先 90 days 改为 3 days
-  2. 使用action在每次执行任务前先删除旧的artifact，参考：[stackoverflow](https://stackoverflow.com/questions/70730786/github-actions-create-artifact-container-failed-artifact-storage-quota-has-b/76859008#76859008)
-  
-  ```script
-    - name: Delete Old Artifacts
-    uses: actions/github-script@v6
-    id: artifact
-    with:
-      script: |
-        const res = await github.rest.actions.listArtifactsForRepo({
-          owner: context.repo.owner,
-          repo: context.repo.repo,
-        })
-
-        res.data.artifacts
-          .forEach(({ id }) => {
-            github.rest.actions.deleteArtifact({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              artifact_id: id,
-            })
-          })
-  ```
-
-
 ## 前言
 
 - 某天发现不能用IEEE的账号白嫖Overleaf的Premium了
@@ -74,6 +41,7 @@ pin: false
   ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202133340.png)
 
 - 复制粘贴 [YML](https://github.com/Country-If/Country-If/blob/main/public_files/sync_overleaf.yml) 中的内容，其中的cron我设定的是每四小时更新一次，可以自定义
+> 更新了一下YML：1. 更新 actions/upload-artifact 的版本，由v2改为了v4；2. 在任务开始前添加步骤，删除旧的组件，以免过多消耗账号的共享存储额度
 
 - 手动触发一次以启动工作流
 ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202153114.png)
