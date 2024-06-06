@@ -13,6 +13,7 @@ pin: false
 ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403201954277.png)
 - 个人比较需要Overleaf的Premium里的GitHub同步功能
 - 项目来源：通过GitHub Actions自动同步Overleaf项目，GitHub：[overleaf_sync_with_git](https://github.com/subhamX/overleaf_sync_with_git)
+- 拓展：[Github自动同步ShareLatex](/posts/ShareLatexSync)
 
 ## 使用步骤
 ### Overleaf端——新建项目保存至GitHub
