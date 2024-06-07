@@ -34,7 +34,7 @@ pin: false
 ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403311019136.png)
 > Cookies获取后请勿退出登录Overleaf，否则cookies可能被撤销导致失效
 >
-> 开发者还建议在获取cookies后，清除当前cookies并通过重新登录以开启一个新会话，保持cookies不需要更新至少维持2个月 (这需要使用到cookie-editor等插件，当然，我并不认为需要这样做，我的actions始于2024.3.20，原有效时间为一周，目前仍正常运行，更新于2024.3.31)
+> 开发者还建议在获取cookies后，清除当前cookies并通过重新登录以开启一个新会话，保持cookies不需要更新至少维持2个月 (这需要使用到cookie-editor等插件，当然，我并不认为需要这样做，我的actions始于2024.3.20，原有效时间为一周，目前仍正常运行，更新于2024.6.7)
 
 #### 3. Actions
 - 在项目的根目录下，创建yml文件，路径为 `.github/workflows/FileName.yml`，`FileName` 可以自定义，yml文件前的路径是固定的，如下所示：
