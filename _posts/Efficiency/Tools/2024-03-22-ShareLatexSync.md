@@ -15,7 +15,7 @@ pin: false
 
 ## 使用步骤
 ### ShareLatex端——新建项目保存至GitHub
-- 此处配置与Overleaf一致，都需要使用本地作为媒介，将项目克隆到本地再上传到GitHub
+- 此处配置与Overleaf一致
 
 ### Github端——权限、Secrets、Actions
 - 此处的不同点主要在于secrets的名称将Overleaf改为了Sharelatex，以及yml文件的修改

@@ -18,7 +18,7 @@ pin: false
 ## 使用步骤
 ### Overleaf端——新建项目保存至GitHub
 - Premium没过期的话，可以直接在菜单页面上传到GitHub
-- Premium过期的话，只能先将项目下载到本地，再上推到GitHub ([LatexDiff](/posts/LatexDiff) 中简述了步骤，此处不赘述)
+- Premium过期的话，通过本地同步，或者通过Actions同步 ([LatexDiff](/posts/LatexDiff) 中简述了步骤，此处不赘述)
 
 ### Github端——权限、Secrets、Actions
 > 通过GitHub的Actions开启定时任务，定期从Overleaf获取文件，完成更新，自动commit以及push
