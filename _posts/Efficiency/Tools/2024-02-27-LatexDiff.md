@@ -11,7 +11,7 @@ pin: false
 
 - LatexDiff可以比较两个tex文件之间的差异，并输出为一个新的tex文件
 - 需要：Overleaf、Github
-- 非premium用户需要本地仓库协助文件上传，配合 [OverleafSync](/posts/OverleafSync) 使用
+- 非premium用户配合 [OverleafSync](/posts/OverleafSync) 使用
 
 ## 配置
 ### Overleaf文件托管到Github
@@ -24,9 +24,12 @@ git reset --hard commit_id
 ```
 
 #### 非Premium用户
-- 在GitHub上创建仓库（建议私有库），并克隆到本地
-- 在Overleaf上下载整个项目到本地，并解压
-- 将解压后的文件复制或移动到本地仓库文件夹中，推送到GitHub（add、commit、push）
+1. 通过本地作为介质上传到github
+  - 在GitHub上创建仓库（建议私有库），并克隆到本地
+  - 在Overleaf上下载整个项目到本地，并解压
+  - 将解压后的文件复制或移动到本地仓库文件夹中，推送到GitHub（add、commit、push）
+
+2. 用github actions同步，见博客：[OverleafSync](/posts/OverleafSync)
 
 ### Github创建Codespaces
 - 左上角菜单按钮 -> `Codespaces` -> `New codespace`
