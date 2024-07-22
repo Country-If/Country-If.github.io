@@ -3,7 +3,7 @@ title: Github自动同步Overleaf
 date: 2024-03-20 00:20:30 +0800
 categories: [Efficiency,Tools]
 tags: [efficiency,latex,git,tools]
-pin: false
+pin: true
 ---
 
 
@@ -41,7 +41,7 @@ pin: false
 
   ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202403202133340.png)
 
-- 复制粘贴 [YML](https://github.com/Country-If/Country-If/blob/main/public_files/sync_overleaf.yml) 中的内容，其中的cron我设定的是每四小时更新一次，可以自定义
+- 复制粘贴 [YML](https://github.com/Country-If/Country-If/blob/main/public_files/sync_overleaf.yml) 中的内容，其中的cron我设定的是每四小时更新一次，可以自定义，比如：`"30 4,10,16 * * *"` (UTC+8时间的12:30，18:30，0:30)
 > 更新了一下YML，更新内容见 [PR](https://github.com/subhamX/overleaf_sync_with_git/pull/9)：1. 更新 actions/upload-artifact 的版本，由v2改为了v4；2. 在任务开始前添加步骤，删除旧的组件，以免过多消耗账号的共享存储额度
 
 - 手动触发一次以启动工作流
