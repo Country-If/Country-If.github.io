@@ -3,7 +3,7 @@ title: Server/Docker Gtihub SSH Configuration
 date: 2024-01-19 13:00:00 +0800
 categories: [Efficiency,Git]
 tags: [efficiency,git,linux]
-pin: false
+pin: true
 ---
 
 
