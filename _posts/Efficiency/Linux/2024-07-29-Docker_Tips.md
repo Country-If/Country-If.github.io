@@ -64,7 +64,7 @@ hugging face模型的下载是最头大的，模型基本都超过1G，还被墙
 
 2. 单独下载
     
-    如果只需要部分文件，那最简单的方式是直接在hugging face网页点击下载按钮下载到本地，再拷贝或者挂载到容器内。这里有个下载的小技巧，可以去hugging face的镜像站下载，如：[hf-mirror](https://hf-mirror.com/)
+    如果只需要部分文件，那最简单的方式是直接在hugging face网页点击下载按钮下载到本地，再拷贝或者挂载到容器内。这里有个下载的小技巧，可以去hugging face的镜像站下载，如：[hf-mirror](https://hf-mirror.com/)。也可以在容器内配置环境：`export HF_ENDPOINT=https://hf-mirror.com`
 
 ### 容器外下载
 在外部机器(windows)或者linux宿主机下载文件比在容器内下载要方便的多，可以预先将部分难下载的文件下载到本地，再通过`docker cp`拷贝或者`docker run -v`在创建容器时将目录挂载到容器，或者在Dockerfile中定义挂载目录
