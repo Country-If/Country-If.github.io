@@ -77,7 +77,7 @@ hugging face模型的下载是最头大的，模型基本都超过1G，还被墙
   --privileged
   ```
 
-- 使用GPU
+- 使用GPU (N卡)
   
   ```bash
   --gpus all -e NVIDIA_DRIVER_CAPABILITIES=compute,utility -e NVIDIA_VISIBLE_DEVICES=all
