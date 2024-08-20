@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-## Information $\quad$ <img src="https://emojis.slackmojis.com/emojis/images/1696534303/70363/doggotypingq.gif?1696534303" width="50">
+## Information &nbsp; <img src="https://emojis.slackmojis.com/emojis/images/1696534303/70363/doggotypingq.gif?1696534303" width="50">
 - Education
 
   |                | Undergraduate                             | Postgraduate                     |
