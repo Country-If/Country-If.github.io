@@ -10,10 +10,12 @@ pin: false
 ## 介绍
 
 - LatexDiff可以比较两个tex文件之间的差异，并输出为一个新的tex文件
-- 需要：Overleaf、Github
+- 使用方法：
+1. Overleaf、Github
+2. Overleaf、本地
 - 非premium用户配合 [OverleafSync](/posts/OverleafSync) 使用
 
-## 配置
+## 方法1：结合GitHub
 ### Overleaf文件托管到Github
 #### Premium用户
 - 左上角 `Menu` -> `Sync` 下的 `Github`
@@ -69,3 +71,11 @@ git add diff.tex && git commit -m "add diff" && git push
   ```
 
 - Codespaces使用完记得关闭（每个月使用额度是有限制的）
+
+
+## 方法2：本地使用
+对GitHub了解不多的可以通过本地使用，此部分略写，有关的命令往上翻翻
+
+- Windows安装latexdiff参考： [latexdiff安装及使用-csdn](https://blog.csdn.net/luosnongning/article/details/128221172)
+
+- 在overleaf上将当前项目整个打包下载到本地，解压后进入目录，使用latexdiff生成 `diff.tex` 文件，再将 `diff.tex` 上传到overleaf，选中 `diff.tex` 文件重新编译即可
