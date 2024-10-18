@@ -17,11 +17,11 @@ pin: false
 ## 前言
 
 - 实现的功能是，用本地的JDK编译代码，将class文件上传到服务器上运行
-- 服务器上必需：rsync, openssh-server, openssl
-- 本地(windows)必需：cwRsync, IDEA
+- 服务器上必需：rsync(可以不用，配Windows感觉鸡肋), openssh-server, openssl
+- 本地(Windows)必需：cwRsync(Windows的很鸡肋), IDEA
 - 网上看到了很多教程要很多配置，但是其实并不需要，只需装核心的依赖，但因实现了，也就记录了
 
-## Rsync配置
+## Rsync配置 (忽略)
 
 ### Server端 (Ubuntu)
 
@@ -81,7 +81,11 @@ pin: false
 
 ### 服务器上配置
 
-移步：[Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
+- SSH的配置，移步：[Clion Connect Remote Server (Docker)](../Clion_Remote_Server/)
+- JDK安装 (jdk 1.8)
+```bash
+apt update && apt install openjdk-8-jdk
+```
 
 ### 本地IDEA配置
 
@@ -89,11 +93,11 @@ pin: false
 
    - Editor Configurations -> Manage Targets -> Add SSH, 填写Host, Port(Docker的话填容器22端口对外映射的宿主机端口), Username, Password
 
-   - 勾选Use rsync，填写项目在服务器上的路径，选择JDK路径以及JDK版本(不填也可以)
+   - 勾选Use rsync(也可以不勾)，填写项目在服务器上的路径，选择JDK路径以及JDK版本(不填也可以)
 
      ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202310132248853.png)
 
-     - JDK路径查看
+     - JDK路径查看 (能跑起来不报错就可以不管这个)
 
        ```bash
        which java		# 查看Java路径，可能是软链接，是软链接的话就用 ls -l 一直查找下去，直到非软链接为止
@@ -140,7 +144,7 @@ pin: false
 
 ## 最后
 
-- 相比起Jetbrains的其他产品，如CLion和Pycharm，由于Windows和Linux路径定义和符号规则等差异，Windows下的IDEA连接远程服务器使用起来并不方便，因此建议还是在Mac下或者Linux虚拟机里使用IDEA
+- 相比起Jetbrains的其他产品，如CLion和Pycharm，由于Windows和Linux路径定义和符号规则等差异，Windows下的IDEA连接远程服务器使用起来并不方便，Rsync配置后也还是鸡肋，因此建议还是在Mac下或者Linux虚拟机里使用IDEA
 
 ## 参考
 
