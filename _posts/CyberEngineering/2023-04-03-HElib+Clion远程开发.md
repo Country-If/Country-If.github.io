@@ -85,7 +85,7 @@ pin: false
 
 - 挂载项目目录，修改Mapping
 
-  ![在这里插入图片描述](/assets/img/feda4de96e124c87ba772c0af94ebe93.png)
+  ![在这里插入图片描述](/assets/img/posts/feda4de96e124c87ba772c0af94ebe93.png)
 
 
 
@@ -93,8 +93,8 @@ pin: false
 
 - CLion能够检索到HElib的库
 
-	![lib](/assets/img/1f9f046e0a434844a1752abc2625f9a2.png)
+	![lib](/assets/img/posts/1f9f046e0a434844a1752abc2625f9a2.png)
 - 代码里导入头文件不报错
 
-	![include](/assets/img/2d8b64ec6d7b4a58b5d42aa656b39311.png)
+	![include](/assets/img/posts/2d8b64ec6d7b4a58b5d42aa656b39311.png)
 

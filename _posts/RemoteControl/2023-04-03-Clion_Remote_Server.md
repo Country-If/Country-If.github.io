@@ -70,24 +70,24 @@ sudo docker exec -it helib bash
   
 - 测试连接
 
-  - 在Docker外，用ssh测试连接：`ssh root@localhost -p 12022`，输入Docker的root密码，成功如下：![welcome](/assets/img/f7b4d81a3d22432b8bcb8662ef8aecea.png)
+  - 在Docker外，用ssh测试连接：`ssh root@localhost -p 12022`，输入Docker的root密码，成功如下：![welcome](/assets/img/posts/f7b4d81a3d22432b8bcb8662ef8aecea.png)
 
 
 
 ### CLion
 
 - Settings -> Build... -> Toolchains -> '+' -> Remote Host
-![settings](/assets/img/165066cf44de4621836de6525e2f106e.png)
+![settings](/assets/img/posts/165066cf44de4621836de6525e2f106e.png)
 - 可以自定义名字，然后设置连接
-![config](/assets/img/7f1c778c2502492fb30ec445d8c310c1.png)
+![config](/assets/img/posts/7f1c778c2502492fb30ec445d8c310c1.png)
 - 按下图填写，注意port应该填写的是Docker对外映射的端口，我这里就应该是12022，而不是22，测试连接没问题就可以了
-![在这里插入图片描述](/assets/img/6bc130135b2b452ba2fa3fd1b23cd6cc.png)
+![在这里插入图片描述](/assets/img/posts/6bc130135b2b452ba2fa3fd1b23cd6cc.png)
 - 设置CMake：Settings -> Build... -> CMake，指定toolchains就行
-![cmake-settings](/assets/img/f6a0655272d7428195783316d781e3bb.png)
+![cmake-settings](/assets/img/posts/f6a0655272d7428195783316d781e3bb.png)
 - 另外，如果想把代码啥的也同步到Docker上，则添加SFTP：Settings -> Build... -> Deployment，添加SFTP，设置Mappings，见下图：
-![sftp](/assets/img/21b2dfac7ffe465ea945082dbbbc8d3a.png)
+![sftp](/assets/img/posts/21b2dfac7ffe465ea945082dbbbc8d3a.png)
 - 下面这个看自己情况设置
-![upload](/assets/img/f4ec534460254a08b08ab16047b5f6df.png)
+![upload](/assets/img/posts/f4ec534460254a08b08ab16047b5f6df.png)
 
 至此，CLion可以顺利连接到服务器里的Docker啦
 
