@@ -46,7 +46,7 @@ sudo docker exec -it helib bash
     ```shell
     apt update && apt install openssl openssh-server -y
     ```
-    后面依次选6，31
+    然后可能需要设置时区，我选的6(Asia)，31(Hong Kong)
     ```shell
     echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
     ```
