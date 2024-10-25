@@ -76,6 +76,25 @@ sudo apt install nodejs ruby ruby-dev git -y &&
 gem install jekyll bundler
 ```
 
+- 一些坑
+
+   1. 如果安装失败，参考[Ubuntu20.04 安装jekyll](https://blog.csdn.net/zcy_wxy/article/details/136139323)，安装ruby**3.0.2**版本 (博客中的3.1.1貌似不可行)
+
+   2. 如果在root下提示：`Don't run Bundler as root. Installing your bundle as root will break this application for all non-root users on this machine.`，运行下面的命令：
+```bash
+bundle config --global silence_root_warning 1
+```
+   
+   3. 如果提示编码问题：``[!] There was an error while loading `jekyll-theme-chirpy.gemspec`: invalid byte sequence in US-ASCII. Bundler cannot continue.``，运行下面的命令：
+```bash
+export LANG="C.UTF-8" && export LC_ALL="C.UTF-8"
+```
+
+   4. 解决bundle install太慢的问题：
+```bash
+bundle config mirror.https://rubygems.org https://gems.ruby-china.com
+```
+
 ### 启动服务
 
 - bundle 安装
