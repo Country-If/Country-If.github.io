@@ -107,7 +107,8 @@ bundle exec jekyll server
 ### 写作Tips
 先码这了，凑够篇幅再另水一篇
 - 交叉引用
-在一篇博客里引用自己的其他博客（这里指的是发在Github Page上的博客），超链接部分可以用相对路径：`[](../title)`，其中的 `title` 可以从博客的URL(`https://xxx.github.io/posts/title`)中截取
+   
+   在一篇博客里引用自己的其他博客（这里指的是发在Github Page上的博客），超链接部分可以用相对路径：`[](../title)`，其中的 `title` 可以从博客的URL(`https://xxx.github.io/posts/title`)中截取
 
 ## 参考
 
