@@ -103,7 +103,7 @@ pin: false
   ```html
   <script type="text/javascript" src="/js/love_onClick.js"></script>
   ```
-2. 在 `js` 文件夹下创建 `snow_background.js` 文件，将下面的代码复制粘贴到 `snow_background.js` 中
+2. 在 `js` 文件夹下创建 `love_onClick.js` 文件，将下面的代码复制粘贴到 `love_onClick.js` 中
   ```js
   !function (e, t, a) {
     function n() {
