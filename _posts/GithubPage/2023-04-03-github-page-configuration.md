@@ -70,9 +70,9 @@ bundle exec jekyll server
 ### 环境配置
 在vscode的Terminal中，执行以下命令：
 ```bash
-sudo apt-get update && 
-sudo apt-get install build-essential && 
-sudo apt-get install nodejs ruby ruby-dev git -y && 
+sudo apt update && 
+sudo apt install build-essential -y && 
+sudo apt install nodejs ruby ruby-dev git -y && 
 gem install jekyll bundler
 ```
 
