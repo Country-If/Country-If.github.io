@@ -7,40 +7,40 @@ pin: true
 ---
 
 
-## 需求
+# 需求
 - 为了不混淆生产环境，使用Docker搭建运行环境
 - 在本地CLion中编写代码，在远程服务器的Docker里运行代码
 
-## 环境
+# 环境
 
 - Clion装在本地Windows 11
 - 远程服务器Ubuntu 20.04
 
-## Clion连接服务器内的Docker
+# Clion连接服务器内的Docker
 
 
-### Docker
+## Docker
 
-- Docker安装 (仅供参考)
+### Docker安装 (仅供参考)
 
   ```bash
   curl -sSL https://get.docker.com/ | sh
   sudo chmod 777 /var/run/docker.sock
   ```
 
-- Docker创建容器
+### Docker创建容器
 ```shell
 sudo docker run --privileged -itd --name helib -p 12022:22 ubuntu:20.04 bash
 ```
 	命令解释：`--privileged`提高权限，不然可能没办法debug；`--name`指定容器名字；`-p`指定端口，用于服务器端口映射到Docker内端口，由于后续需要通过ssh连接Docker容器，故映射到**22**端口；使用的镜像为ubuntu:20.04，镜像随意；bash指定运行终端
 	PS. 可以加个`-v`参数指定挂载目录
 	
-- 由于前面用了`-d`让容器在后台运行，所以需要用`exec`命令进入容器
+### 进入容器：由于前面用了`-d`让容器在后台运行，所以需要用`exec`命令进入容器
 ```shell
 sudo docker exec -it helib bash
 ```
 	
-- 安装ssh等服务
+### 安装ssh等服务
 
   - Ubuntu (sudo)
     ```shell
@@ -68,13 +68,12 @@ sudo docker exec -it helib bash
     firewall-cmd --reload
     ```
   
-- 测试连接
+### 测试连接
 
   - 在Docker外，用ssh测试连接：`ssh root@localhost -p 12022`，输入Docker的root密码，成功如下：![welcome](/assets/img/posts/f7b4d81a3d22432b8bcb8662ef8aecea.png)
 
 
-
-### CLion
+## CLion
 
 - Settings -> Build... -> Toolchains -> '+' -> Remote Host
 ![settings](/assets/img/posts/165066cf44de4621836de6525e2f106e.png)
@@ -94,5 +93,5 @@ sudo docker exec -it helib bash
 
 
 
-## 参考
+# 参考
 > [以clion为例记录一次基于docker环境配置开发-CSDN](https://blog.csdn.net/xiaomu_347/article/details/126762754)

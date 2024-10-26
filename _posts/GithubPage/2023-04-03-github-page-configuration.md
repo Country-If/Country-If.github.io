@@ -36,7 +36,7 @@ pin: true
 1. 访问 GitHub 上之前创建的仓库。*Settings* -> *Pages*，在 *Build and deployment* 下的 **Source**，从下拉菜单中选择 **GitHub Actions**
 2. 将任何提交推送到 GitHub 以触发 Actions 工作流程。在仓库的 *Actions* 选项卡中，可以看到名为 *Build and Deploy* 的工作流正在运行。一旦构建完成并且成功，网站将自动部署
 
-## Windows 本地运行
+## Windows本地编写
 
 本地部署可以更加方便地修改网站内容，实时查看效果，然后再推送到云端。
 
@@ -58,7 +58,7 @@ bundle exec jekyll server
 6. 浏览器访问: [http://localhost:4000](http://localhost:4000)
 7. 云端更新：使用Git Bash或者Github Desktop等，推送 **修改的文件** 到Github仓库
 
-## Codespaces 本地运行
+## Codespaces云端编写
 
 如果不想在Windows下部署，或者Windows下部署失败，可以使用Github的 Codespaces 功能，在浏览器中启动服务，实现本地运行。
 
@@ -88,6 +88,10 @@ bundle config --global silence_root_warning 1
    3. 如果提示编码问题：``[!] There was an error while loading `jekyll-theme-chirpy.gemspec`: invalid byte sequence in US-ASCII. Bundler cannot continue.``，运行下面的命令：
 ```bash
 export LANG="C.UTF-8" && export LC_ALL="C.UTF-8"
+```
+   也可将其永久设置：写入`~/.bashrc`后
+```bash
+source ~/.bashrc
 ```
 
    4. 解决bundle install太慢的问题：
@@ -123,7 +127,131 @@ bundle exec jekyll server
 
 - 官方教程还是读一遍，官方文档给出了撰写文章的格式，整理了官方的文档：[official-tutorials](../official-tutorials/)
 
-### 写作Tips
+## Windows本地编写 + Linux远程服务
+
+服务器宿主机/docker容器配置Jekyll的环境，Windows本地使用vscode远程连接到远程服务。优势在于，相比于Windows和codespace，不需要使用后关闭服务，可以让docker一直运行，随时在本地打开vscode就可以连接开始撰写博客以及预览效果
+
+### 远程配置 (以docker为例)
+
+因为有多人编写博客的需求，因此考虑构建一个基础Jekyll镜像，不同用户可以基于基础镜像去启动自己的Jekyll容器服务。如果没有多人的需求，直接构建一个自己的Jekyll容器即可。
+
+1. 构建基础Jekyll镜像
+
+   - Jekyll的配置参考上文[环境配置](#环境配置)
+
+   - 由于之后需要在Windows本地远程连接容器，所以需要配置SSH，参考前文[CLion Connect Remote Server (Docker)中`安装ssh等服务`的部分](../Clion_Remote_Server/#安装ssh等服务)
+
+   - 容器创建后，退出容器，保存当前容器（容器名假定为 github_page_container）为镜像（镜像名假定为github_page，版本号假定为v3）
+   
+     ```bash
+     sudo docker commit github_page_container github_page:v3
+     ```
+
+   - 便捷shell脚本(可选)
+     
+     在根目录下编写了三个脚本，分别为`start_jekyll.sh`、`stop_jekyll.sh`和`restart_jekyll.sh`，用于快速启动、停止、重启Jekyll服务。注意：脚本需要给写权限，使用时需要修改脚本中自己GitHub Page仓库路径
+
+     `start_jekyll.sh`:
+
+     ```shell
+     #!/bin/bash
+     
+     PAGE_PATH="你的Github Page仓库路径"
+     
+     if [ -z "$PAGE_PATH" ] || [ ! -d "$PAGE_PATH" ]; then
+         echo "错误：请编辑该shell脚本，修改PAGE_PATH的路径为自己的Github Page仓库路径。"
+         exit 1
+     fi
+     
+     cd $PAGE_PATH
+     nohup bundle exec jekyll server --host 0.0.0.0 > ../jekyll_log 2>&1 &
+     ```
+     
+     `stop_jekyll.sh`:
+     ```shell
+     #!/bin/bash
+     
+     PROGRAM_NAME="jekyll server --host 0.0.0.0"
+     
+     PID=$(pgrep -f "$PROGRAM_NAME")
+     
+     if [ ! -z "$PID" ]; then
+         kill $PID
+     else
+         echo "Jekyll is not running."
+     fi
+     ```
+     
+     `restart_jekyll.sh`:
+     ```shell
+     #!/bin/bash
+     
+     PAGE_PATH="你的Github Page仓库路径"
+     PROGRAM_NAME="jekyll server --host 0.0.0.0"
+     
+     if [ -z "$PAGE_PATH" ] || [ ! -d "$PAGE_PATH" ]; then
+         echo "错误：请编辑该shell脚本，修改PAGE_PATH的路径为自己的Github Page仓库路径。"
+         exit 1
+     fi
+     
+     PID=$(pgrep -f "$PROGRAM_NAME")
+     
+     if [ ! -z "$PID" ]; then
+         kill $PID
+         sleep 3
+         cd $PAGE_PATH
+         nohup bundle exec jekyll server --host 0.0.0.0 > ../jekyll_log 2>&1 &
+     else
+         echo "Jekyll is not running."
+     fi
+     ```
+
+2. 创建自己的Jekyll容器
+
+   - 基于前面保存的镜像，创建容器，进入容器
+
+     ```bash
+     sudo docker run -itd --privileged --name username_github_page -p xxxxx:4000 -p xxxxx:22 github_page:v3 /bin/bash
+     sudo docker exec -it username_github_page bash
+     ```
+     
+     参数说明：`username_github_page`是自己定义的容器名；`github_page:v3`是前面保存的镜像；这里需要配置两个端口，4000是web预览服务的端口，22是SSH的端口，需要对外映射
+     
+   - 配置Github SSH，参考前文[Server/Docker Gtihub SSH Configuration](../Server_Docker_Github_SSH/)
+   
+   - 克隆自己的Github Page仓库 (走SSH方式)，进入仓库目录
+   
+   - 安装bundle
+   
+     ```bash
+     bundle install
+     ```
+   
+   - 启动Jekyll
+   
+     ```bash
+     bundle exec jekyll server --host 0.0.0.0
+     ```
+   
+     也可以后台启动Jekyll，将日志输出到上一级目录下的`jekyll_log`文件中
+   
+     ```bash
+     nohup bundle exec jekyll server --host 0.0.0.0 > ../jekyll_log 2>&1 &
+     ```
+
+   - 预览博客效果
+
+     网页访问`服务器ip:端口`，注意这里的端口是创建容器时4000端口对外映射的端口
+
+### 本地连接
+
+- vscode左下角打开远程窗口
+- 连接到Host或者连接当前窗口到Host
+- 添加新的SSH Host，按照提示输入`ssh root@ip -p 端口`，注意这里的端口是前面创建容器时22端口对外映射的端口
+- 输入密码即可连接到容器
+- 打开文件夹，输入容器中Github Page仓库所在的路径即可打开，之后即可正常编写，git的管理可以使用vscode，也可以使用命令行
+
+## 写作Tips
 先码这了，凑够篇幅再另水一篇
 - 交叉引用
    
