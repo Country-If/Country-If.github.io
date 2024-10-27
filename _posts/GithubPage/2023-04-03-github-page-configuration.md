@@ -156,15 +156,19 @@ bundle exec jekyll server
      ```shell
      #!/bin/bash
      
-     PAGE_PATH="你的Github Page仓库路径"
+     PAGE_PATH="/Page"
+     PROGRAM_NAME="jekyll server --host 0.0.0.0"
+     PID=$(pgrep -f "$PROGRAM_NAME")
      
-     if [ -z "$PAGE_PATH" ] || [ ! -d "$PAGE_PATH" ]; then
-         echo "错误：请编辑该shell脚本，修改PAGE_PATH的路径为自己的Github Page仓库路径。"
-         exit 1
+     if [ -z "$PID" ]; then
+         if [ -z "$PAGE_PATH" ] || [ ! -d "$PAGE_PATH" ]; then
+             echo "错误：请编辑该shell脚本，修改PAGE_PATH的路径为自己的Github Page仓库路径。"
+             exit 1
+         fi
+     
+         cd $PAGE_PATH
+         nohup bundle exec jekyll server --host 0.0.0.0 > ../nohup_log 2>&1 &
      fi
-     
-     cd $PAGE_PATH
-     nohup bundle exec jekyll server --host 0.0.0.0 > ../jekyll_log 2>&1 &
      ```
      
      `stop_jekyll.sh`:
