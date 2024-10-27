@@ -176,7 +176,6 @@ bundle exec jekyll server
      #!/bin/bash
      
      PROGRAM_NAME="jekyll server --host 0.0.0.0"
-     
      PID=$(pgrep -f "$PROGRAM_NAME")
      
      if [ ! -z "$PID" ]; then
@@ -192,15 +191,14 @@ bundle exec jekyll server
      
      PAGE_PATH="你的Github Page仓库路径"
      PROGRAM_NAME="jekyll server --host 0.0.0.0"
-     
-     if [ -z "$PAGE_PATH" ] || [ ! -d "$PAGE_PATH" ]; then
-         echo "错误：请编辑该shell脚本，修改PAGE_PATH的路径为自己的Github Page仓库路径。"
-         exit 1
-     fi
-     
      PID=$(pgrep -f "$PROGRAM_NAME")
      
      if [ ! -z "$PID" ]; then
+         if [ -z "$PAGE_PATH" ] || [ ! -d "$PAGE_PATH" ]; then
+             echo "错误：请编辑该shell脚本，修改PAGE_PATH的路径为自己的Github Page仓库路径。"
+             exit 1
+         fi
+     
          kill $PID
          sleep 3
          cd $PAGE_PATH
