@@ -170,6 +170,11 @@ bundle exec jekyll server
          nohup bundle exec jekyll server --host 0.0.0.0 > ../jekyll_log 2>&1 &
      fi
      ```
+
+     可以将`start_jekyll.sh`加入开机启动：
+     ```bash
+     echo "/start_jekyll.sh" >> ~/.bashrc
+     ```
      
      `stop_jekyll.sh`:
      ```shell
