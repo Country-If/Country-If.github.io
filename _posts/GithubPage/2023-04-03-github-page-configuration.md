@@ -156,7 +156,7 @@ bundle exec jekyll server
      ```shell
      #!/bin/bash
      
-     PAGE_PATH="/Page"
+     PAGE_PATH="你的Github Page仓库路径"
      PROGRAM_NAME="jekyll server --host 0.0.0.0"
      PID=$(pgrep -f "$PROGRAM_NAME")
      
@@ -167,7 +167,7 @@ bundle exec jekyll server
          fi
      
          cd $PAGE_PATH
-         nohup bundle exec jekyll server --host 0.0.0.0 > ../nohup_log 2>&1 &
+         nohup bundle exec jekyll server --host 0.0.0.0 > ../jekyll_log 2>&1 &
      fi
      ```
      
