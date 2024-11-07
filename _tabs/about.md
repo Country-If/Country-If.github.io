@@ -8,7 +8,7 @@ order: 4
 - Education
 
   |                | Undergraduate                             | Postgraduate                     |
-  | :------------: | :---------------------------------------: | :------------------------------: |
+  | :------------ | :---------------------------------------: | :------------------------------: |
   | **University** | Guangdong University of Technology (GDUT) | Xidian University (XDU) <!--(Exempt from Admission Exam)-->         |
   | **Department** | School of Computers                       | School of Cyber Engineering      |
   | **Major**      | Information Security                      | Network and Information Security |
@@ -19,7 +19,7 @@ order: 4
   - [Github Page](https://Country-If.github.io)
   - [CSDN](https://blog.csdn.net/weixin_45824303)
 
-## Stats <img src="https://emojis.slackmojis.com/emojis/images/1588866973/8934/hellokittydance.gif?1588866973" width="70">
+## Status <img src="https://emojis.slackmojis.com/emojis/images/1588866973/8934/hellokittydance.gif?1588866973" width="70">
 <!-- &hide=stars,commits,prs,issues,contribs -->
 <!-- &theme=dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontrast, dracula -->
 [![Maylon's GitHub stats (Try to Use proxy and Reload the page when you see this)](https://github-readme-stats-three-brown-35.vercel.app/api?username=Country-If&show_icons=true&theme=transparent&include_all_commits=true&hide_border=true)](https://github.com/Country-If)
