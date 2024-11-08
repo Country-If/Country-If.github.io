@@ -170,8 +170,8 @@ pin: false
 
 - 回到顶部
 
-修改 `_sass/addon/commons.scss` 文件，如下图所示，自行调参
-  ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202401031542773.png)
+F12定位文件，尝试修改，定位到需要修改的行。修改 `_sass/addon/commons.scss` 文件对应行的参数，自行调参
+  ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202411081852853.png)
 
 - 右下角主题
 
