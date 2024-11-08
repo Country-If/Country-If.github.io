@@ -1611,7 +1611,7 @@ $sidebar-display: "sidebar-display";
   }
 
   #back-to-top {
-    right: calc((100vw - #{$sidebar-width-large} - #{$main-content-max-width}) / 2 + 2rem);
+    right: calc((100vw - #{$sidebar-width-large} - #{$main-content-max-width} + 300px) / 2 + 2rem);
   }
 
   #sidebar {
