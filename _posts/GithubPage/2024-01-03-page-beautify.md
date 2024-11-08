@@ -53,7 +53,7 @@ pin: false
 ```html
 <script src="https://cdn.jsdelivr.net/gh/Country-If/live2d-cdn@v10/autoload.js"></script>
 ```
-挡住 `回到顶部` 按钮被遮挡的话，参考 [commit](https://github.com/Country-If/Country-If.github.io/commit/a0b95cff87aed5037ee517d418f631858065ba8a) 修改参数
+挡住 `回到顶部` 按钮被遮挡的话，参考 [commit 1](https://github.com/Country-If/Country-If.github.io/commit/a0b95cff87aed5037ee517d418f631858065ba8a) 或者 [commit 2](https://github.com/Country-If/Country-If.github.io/commit/795c966d5ff4f3b9c5dabbf05ba8b5349cb84864) 修改参数
 
 ## 雪花背景
 1. 在 `_layouts/default.html` 中添加下面的代码，放在了 `</body>` 前
@@ -178,7 +178,7 @@ pin: false
 
 - 回到顶部
 
-F12定位文件，尝试修改，定位到需要修改的行。修改 `_sass/addon/commons.scss` 文件对应行的参数，自行调参
+F12定位文件，尝试修改，定位到需要修改的行。修改 `_sass/addon/commons.scss` 文件对应行的参数，自行调参 (求前端大佬指点一下，怎么配置让这个按钮**动态地**固定在某个位置，不受页面大小变化影响，固定显示在正文右侧)
   ![](https://cdn.jsdelivr.net/gh/Country-If/Typora-images/img/202411081852853.png)
 
 - 右下角主题
