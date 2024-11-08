@@ -9,6 +9,7 @@ pin: false
 
 ## 看板娘
 
+### 旧版
 1. 将下面的代码复制粘贴到 `_layouts/default.html` 文件中，位置随便放，我放在了 `</body>` 后
   ```html
   <script type="text/javascript" charset="utf-8" src="https://l2dwidget.js.org/lib/L2Dwidget.min.js"></script>
@@ -46,6 +47,13 @@ pin: false
   ```
   注：上面代码中，`jsonPath` 的值是 `live2d-widget-model-shizuku` 文件夹下的 `assets` 文件夹下的 `shizuku.model.json` 文件的路径，如果你使用的是其他的看板娘，那么需要修改这个路径；其他参数自行调整
 2. 克隆仓库： [raoenhui/live2d-example: 看板娘案例](https://github.com/raoenhui/live2d-example)，在顶级创建 `L2DWidgets` 文件夹，将仓库中的 `live2d-widget-model-shizuku` 文件夹复制到 `L2DWidgets` 中
+
+### 新版：小埋
+在 `_layouts/default.html` 文件中，`<body>`标签内粘贴以下代码：
+```html
+<script src="https://cdn.jsdelivr.net/gh/Country-If/live2d-cdn@v10/autoload.js"></script>
+```
+挡住 `回到顶部` 按钮被遮挡的话，参考 [commit](https://github.com/Country-If/Country-If.github.io/commit/a0b95cff87aed5037ee517d418f631858065ba8a) 修改参数
 
 ## 雪花背景
 1. 在 `_layouts/default.html` 中添加下面的代码，放在了 `</body>` 前
