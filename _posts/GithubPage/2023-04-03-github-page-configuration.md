@@ -85,7 +85,7 @@ gem install jekyll bundler
 bundle config --global silence_root_warning 1
 ```
    
-   3. 如果提示编码问题：``[!] There was an error while loading `jekyll-theme-chirpy.gemspec`: invalid byte sequence in US-ASCII. Bundler cannot continue.``，运行下面的命令：
+   3. 如果提示中文编码乱码问题：``[!] There was an error while loading `jekyll-theme-chirpy.gemspec`: invalid byte sequence in US-ASCII. Bundler cannot continue.``，运行下面的命令：
 ```bash
 export LANG="C.UTF-8" && export LC_ALL="C.UTF-8"
 ```
