@@ -95,6 +95,20 @@ pin: false
 
   使用快捷键 ctrl shift p，键入命令：`texpresso: start Document`，回车，初次编译可能较慢，需要等待完全编译完再继续编辑。鼠标和键盘的控制快捷键参考：[Viewer Controls](https://github.com/let-def/texpresso/?tab=readme-ov-file#viewer-controls)
 
+- 撰写注意
+
+  1. 本地编译时需要加以下命令，修复字体错误：
+
+     ```latex
+     \usepackage{newtxtext}
+     \usepackage{newtxmath}
+     ```
+
+  2. 中文支持，使用Ctex
+
+     ```latex
+     \documentclass[UTF8]{ctexart}
+     ```
 
 ## 方法2：使用已搭建好的环境
 方法2是建立在方法1的基础上，即需要其他人使用方法1构建环境后，将其环境导出，再进行导入使用
