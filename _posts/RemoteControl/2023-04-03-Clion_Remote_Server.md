@@ -55,7 +55,7 @@ sudo docker exec -it helib bash
     ```
     可以将 ssh 加入开机启动：
      ```bash
-    echo "service ssh restart" >> ~/.bashrc
+    echo "service ssh start" >> ~/.bashrc
      ```
     设置Docker容器的root密码，用于后续连接：
     ```shell
